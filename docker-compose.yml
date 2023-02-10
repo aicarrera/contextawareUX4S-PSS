@@ -14,5 +14,14 @@ services:
       # Change folders in the .env file or directly here  
       - ${GRAPHDB_HOME}:/opt/graphdb/home    
       - ${REPOSITORY_CONFIG_FILE}:/opt/graphdb/graphdb-repo-config.ttl
+  
+   backend:
+    build: ${APPLICATION_FOLDER}/server-backenddrivenUI
+    ports:
+      - "4000:4000"
 
-    
+   frontend:
+    build: ${APPLICATION_FOLDER}/web-backenddrivenui
+    ports:
+      - "3000:3000"
+ 
