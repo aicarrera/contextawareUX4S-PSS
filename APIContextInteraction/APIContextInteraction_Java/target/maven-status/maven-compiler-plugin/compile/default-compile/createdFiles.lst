@@ -1,0 +1,15 @@
+mgep\Entities\Service.class
+mgep\Entities\RequestNextItem.class
+mgep\Entities\GenericResponse.class
+mgep\API\CORSFilter.class
+mgep\DataAcess\Parametrization.class
+mgep\Entities\User.class
+mgep\API\Configuration.class
+mgep\Entities\Interaction.class
+mgep\Entities\InteractionSequence.class
+mgep\Entities\Subservice.class
+mgep\DataAcess\UserDatabase.class
+mgep\DataAcess\RDFDAL.class
+mgep\Entities\ContextInteraction.class
+mgep\API\Headers.class
+mgep\DataAcess\RDFRepositoryManager.class

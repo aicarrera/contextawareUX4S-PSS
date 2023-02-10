@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web_api:
+    build: ./APIContextInteraction_Java
+    ports:
+      - "8080:8080"
+  database:
+    image: ontotext/graphdb:10.0.0
+    environment:
+      GRAPHDB_JAVA_OPTIONS: -Xmx1g
+    ports:
+      - "7200:7200"
+    volumes:
+      # Change folders in the .env file or directly here  
+      - ${GRAPHDB_HOME}:/opt/graphdb/home    
+      - ${REPOSITORY_CONFIG_FILE}:/opt/graphdb/graphdb-repo-config.ttl
+
+    
