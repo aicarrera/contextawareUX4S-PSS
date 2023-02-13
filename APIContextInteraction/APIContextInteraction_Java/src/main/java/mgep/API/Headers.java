@@ -55,7 +55,7 @@ public class Headers {
     public Response getUser(@QueryParam("username") String username) {
         System.out.println("getUser");
         Map<String,User> users= UserDatabase.readUsersFromCSV("users_db.csv");        ;
-     	return Response.ok(users.get(username)).build();
+     	return Response.ok(users.get(username)).header("Access-Control-Allow-Origin", "*").build();
     }                 
     
     
