@@ -1,0 +1,1 @@
+[INFO ] 2023-02-10 14:29:32,729 [import-task-interaction_context-1 | c.o.t.m.MonitorRepositoryConnection] Parallel mode requested but it is disabled globally. Using serial mode instead.

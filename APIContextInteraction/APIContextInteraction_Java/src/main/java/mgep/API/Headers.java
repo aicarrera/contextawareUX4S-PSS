@@ -61,6 +61,8 @@ public class Headers {
     
     /****
      * QUERY DATA FROM INTERACTIONS AND INTERACTION SEQUENCES
+     * @param GRAPHDB_SERVER
+     * @return 
      ****/
     
     @GET
