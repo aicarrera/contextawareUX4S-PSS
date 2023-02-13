@@ -35,7 +35,3 @@ services:
       - "3000:3000"
     network_mode: "host"
 
-
-
- 
->>>>>>> 9f4349be02b2975faa06e3c0dfa318d34595284e
