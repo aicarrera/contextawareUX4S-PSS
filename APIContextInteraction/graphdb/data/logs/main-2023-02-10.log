@@ -1,0 +1,825 @@
+[INFO ] 2023-02-10 16:27:55,419 [main | c.o.g.Config] Using 'jar:file:/opt/graphdb/dist/lib/graphdb-application-common-10.0.0.jar!/com/ontotext/graphdb/logback.xml' as logback's configuration file
+[INFO ] 2023-02-10 16:27:58,040 [main | c.o.g.s.GraphDB] Starting GraphDB in workbench mode.
+[INFO ] 2023-02-10 16:28:24,191 [main | c.o.g.Config] GraphDB Home directory: /opt/graphdb/home
+[INFO ] 2023-02-10 16:28:24,191 [main | c.o.g.Config] GraphDB Config directory: /opt/graphdb/home/conf
+[INFO ] 2023-02-10 16:28:24,192 [main | c.o.g.Config] GraphDB Data directory: /opt/graphdb/home/data
+[INFO ] 2023-02-10 16:28:24,192 [main | c.o.g.Config] GraphDB Work directory: /opt/graphdb/home/work
+[INFO ] 2023-02-10 16:28:24,193 [main | c.o.g.Config] GraphDB Logs directory: /opt/graphdb/home/logs
+[INFO ] 2023-02-10 16:28:25,908 [main | c.o.g.r.s.SecurityUtil] Cluster gRPC server security is disabled
+[INFO ] 2023-02-10 16:28:26,729 [main | c.o.f.c.s.r.GraphDBRpcServer] Started gRPC server on port 7300 successfully
+[WARN ] 2023-02-10 16:28:34,382 [main | o.a.c.u.SessionIdGeneratorBase] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [133] milliseconds.
+[INFO ] 2023-02-10 16:28:34,910 [main | c.o.g.s.GraphDB] Started GraphDB in workbench mode at port 7200.
+[INFO ] 2023-02-10 16:46:08,820 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Version: 10.0, revision: 580949524
+[INFO ] 2023-02-10 16:46:08,832 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Build date: Wed Jun 29 19:29:19 GMT 2022
+[INFO ] 2023-02-10 16:46:08,842 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Started repository interaction_context in READ/WRITE mode.
+[INFO ] 2023-02-10 16:46:08,864 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'partialRDFS' to default value 'false'
+[INFO ] 2023-02-10 16:46:08,868 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'transaction-isolation' to default value 'true'
+[INFO ] 2023-02-10 16:46:08,869 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'checkForValidPropertiesAndClasses' to default value 'false'
+[INFO ] 2023-02-10 16:46:08,869 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'transaction-mode' to default value 'safe'
+[INFO ] 2023-02-10 16:46:08,870 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'entity-pool-implementation' to default value 'transactional'
+[INFO ] 2023-02-10 16:46:08,870 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'useShutdownHooks' to default value 'true'
+[INFO ] 2023-02-10 16:46:08,881 [http-nio-7200-exec-10 | c.o.GraphDBConfigParameters] Cache pages for tuples: 7829
+[INFO ] 2023-02-10 16:46:08,887 [http-nio-7200-exec-10 | c.o.GraphDBConfigParameters] Cache pages for predicates: 1118
+[INFO ] 2023-02-10 16:46:08,889 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 16:46:08,890 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Storage folder do not exists and is created: /opt/graphdb/home/data/repositories/interaction_context/storage
+[INFO ] 2023-02-10 16:46:08,906 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 16:46:08,907 [http-nio-7200-exec-10 | c.o.t.e.EntityPoolFactory] Using entity pool implementation: transactional-disk
+[INFO ] 2023-02-10 16:46:08,910 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'epool.connection.cache.size' to default value '2000'
+[INFO ] 2023-02-10 16:46:08,916 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 16:46:09,020 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'enable-pool-reversecache' to default value 'true'
+[INFO ] 2023-02-10 16:46:09,481 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'allow-system-entities-as-data' to default value 'false'
+[INFO ] 2023-02-10 16:46:09,485 [http-nio-7200-exec-10 | c.o.t.u.l.LimitedObjectCacheFactory] Using LRU cache type: synch
+[INFO ] 2023-02-10 16:46:09,495 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'cache-ratio-so-os-cso-cos' to default value '[50, 50, 50]'
+[INFO ] 2023-02-10 16:46:09,538 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 16:46:09,541 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 16:46:09,733 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'virtual.repository.mode' to default value 'false'
+[INFO ] 2023-02-10 16:46:09,775 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'enable-debug-rules' to default value 'false'
+[INFO ] 2023-02-10 16:46:09,803 [http-nio-7200-exec-10 | c.o.t.InferencerFactory] ruleSet=rdfsplus-optimized, partialRdfs=false
+[INFO ] 2023-02-10 16:46:09,815 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'filter.obj.only.hint' to default value 'true'
+[INFO ] 2023-02-10 16:46:09,895 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'epool.journal.buffer.size' to default value '1024'
+[INFO ] 2023-02-10 16:46:09,999 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'check.pred.stats' to default value 'false'
+[INFO ] 2023-02-10 16:46:10,182 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'disable-plugins' to default value '[]'
+[INFO ] 2023-02-10 16:46:10,183 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'skip-default-plugins' to default value 'false'
+[INFO ] 2023-02-10 16:46:10,184 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Searching for plugins available in the classpath...
+[INFO ] 2023-02-10 16:46:10,217 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin direct
+[INFO ] 2023-02-10 16:46:10,218 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin notifications
+[INFO ] 2023-02-10 16:46:10,219 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin expose-entity
+[INFO ] 2023-02-10 16:46:10,220 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin literals-index
+[INFO ] 2023-02-10 16:46:10,220 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin script
+[INFO ] 2023-02-10 16:46:10,221 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin utils
+[INFO ] 2023-02-10 16:46:10,221 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin plugincontrol
+[INFO ] 2023-02-10 16:46:10,222 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin magic-predicates
+[INFO ] 2023-02-10 16:46:10,222 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin sparql-template
+[INFO ] 2023-02-10 16:46:10,223 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'register-plugins' to default value '[]'
+[INFO ] 2023-02-10 16:46:10,225 [http-nio-7200-exec-10 | c.o.GraphDBConfigParameters] Reading external plugins from /opt/graphdb/dist/lib/plugins
+[INFO ] 2023-02-10 16:46:10,226 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'register-external-plugins' to default value '[/opt/graphdb/dist/lib/plugins]'
+[INFO ] 2023-02-10 16:46:10,226 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Registering external plugins...
+[INFO ] 2023-02-10 16:46:10,228 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/history-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,239 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin history
+[INFO ] 2023-02-10 16:46:10,240 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sequences-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,248 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin sequences
+[INFO ] 2023-02-10 16:46:10,249 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/similarity-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,285 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin similarity
+[INFO ] 2023-02-10 16:46:10,286 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/autocomplete-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,315 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin autocomplete
+[INFO ] 2023-02-10 16:46:10,316 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/entity-change-connector for plugins
+[INFO ] 2023-02-10 16:46:10,356 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin entity-change
+[INFO ] 2023-02-10 16:46:10,357 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geosparql-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,476 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin GeoSPARQL
+[INFO ] 2023-02-10 16:46:10,476 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/solr-connector for plugins
+[INFO ] 2023-02-10 16:46:10,594 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin solr-connector
+[INFO ] 2023-02-10 16:46:10,595 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/elasticsearch-connector for plugins
+[INFO ] 2023-02-10 16:46:10,776 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin elasticsearch-connector
+[INFO ] 2023-02-10 16:46:10,777 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/tx-rollback-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,782 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin tx-rollback
+[INFO ] 2023-02-10 16:46:10,783 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sparql-mm for plugins
+[INFO ] 2023-02-10 16:46:10,789 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin sparql-mm
+[INFO ] 2023-02-10 16:46:10,790 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/notifications-logger-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,794 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin notifications-logger
+[INFO ] 2023-02-10 16:46:10,795 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/proof-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,802 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin proof
+[INFO ] 2023-02-10 16:46:10,803 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/dependencies-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,813 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin dependencies-plugin
+[INFO ] 2023-02-10 16:46:10,814 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/change-tracking-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,821 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin change-tracking
+[INFO ] 2023-02-10 16:46:10,822 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/rdfrank-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,831 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin rdfrank
+[INFO ] 2023-02-10 16:46:10,832 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/kafka-connector for plugins
+[INFO ] 2023-02-10 16:46:10,886 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin kafka-connector
+[INFO ] 2023-02-10 16:46:10,887 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/mongodb-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,908 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin mongodb
+[INFO ] 2023-02-10 16:46:10,908 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/text-mining-plugin for plugins
+[INFO ] 2023-02-10 16:46:10,927 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin text-mining
+[INFO ] 2023-02-10 16:46:10,928 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geospatial-plugin for plugins
+[INFO ] 2023-02-10 16:46:11,062 [http-nio-7200-exec-10 | c.o.t.p.g.FunctionLoader] Registered 1 functions from package com.ontotext.trree.plugin.geo.
+[INFO ] 2023-02-10 16:46:11,063 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin geospatial
+[INFO ] 2023-02-10 16:46:11,064 [http-nio-7200-exec-10 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/lucene-connector for plugins
+[INFO ] 2023-02-10 16:46:11,200 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Registering plugin lucene-connector
+[INFO ] 2023-02-10 16:46:11,201 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugins... (DEFAULT)
+[INFO ] 2023-02-10 16:46:11,207 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] License configuration: Embedded license
+[INFO ] 2023-02-10 16:46:11,208 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] License file: jar:file:/opt/graphdb/dist/lib/graphdb-runtime-10.0.0.jar!/GRAPHDB_LITE.license
+[INFO ] 2023-02-10 16:46:11,213 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Product:                 GRAPHDB_LITE
+[INFO ] 2023-02-10 16:46:11,213 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Usage restriction:       null
+[INFO ] 2023-02-10 16:46:11,214 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Licensee:                Freeware
+[INFO ] 2023-02-10 16:46:11,214 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[INFO ] 2023-02-10 16:46:11,215 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Version:                 10.0
+[INFO ] 2023-02-10 16:46:11,215 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Expiry date:             none
+[INFO ] 2023-02-10 16:46:11,216 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Latest publication date: none
+[INFO ] 2023-02-10 16:46:11,217 [http-nio-7200-exec-10 | c.o.l.LicenseRegistry] Max CPU cores:           1
+[INFO ] 2023-02-10 16:46:11,219 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'nonInterpretablePredicates' to default value 'null'
+[INFO ] 2023-02-10 16:46:11,233 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'GeoSPARQL'
+[INFO ] 2023-02-10 16:46:13,053 [http-nio-7200-exec-10 | c.o.t.g.FunctionLoader] Registered 50 functions from package com.useekm.geosparql.
+[INFO ] 2023-02-10 16:46:13,057 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'autocomplete'
+[INFO ] 2023-02-10 16:46:13,060 [http-nio-7200-exec-10 | c.o.t.p.a.AutocompletePluginUtils] >>>>>>>> AutocompletePlugin: No configuration file found at /opt/graphdb/home/data/repositories/interaction_context/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+[INFO ] 2023-02-10 16:46:13,071 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'change-tracking'
+[INFO ] 2023-02-10 16:46:13,103 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'dependencies-plugin'
+[INFO ] 2023-02-10 16:46:13,106 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'direct'
+[INFO ] 2023-02-10 16:46:13,107 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'elasticsearch-connector'
+[INFO ] 2023-02-10 16:46:13,131 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'entity-change'
+[INFO ] 2023-02-10 16:46:13,142 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'expose-entity'
+[INFO ] 2023-02-10 16:46:13,144 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'geospatial'
+[INFO ] 2023-02-10 16:46:13,146 [http-nio-7200-exec-10 | c.o.t.p.g.GeoSpatialPlugin] Plugin:geospatial initialized
+[INFO ] 2023-02-10 16:46:13,146 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'history'
+[INFO ] 2023-02-10 16:46:13,156 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'kafka-connector'
+[INFO ] 2023-02-10 16:46:13,172 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'literals-index'
+[WARN ] 2023-02-10 16:46:13,182 [http-nio-7200-exec-10 | c.o.p.literals-index] Rebuilding literals indexes. Starting from id:1
+[WARN ] 2023-02-10 16:46:13,219 [http-nio-7200-exec-10 | c.o.p.literals-index] Complete in 0.03, num entries indexed:0
+[INFO ] 2023-02-10 16:46:13,220 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'lucene-connector'
+[INFO ] 2023-02-10 16:46:13,233 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'magic-predicates'
+[INFO ] 2023-02-10 16:46:13,235 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#foreach
+[INFO ] 2023-02-10 16:46:13,235 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#length
+[INFO ] 2023-02-10 16:46:13,236 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#concat
+[INFO ] 2023-02-10 16:46:13,236 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#for
+[INFO ] 2023-02-10 16:46:13,237 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#split
+[INFO ] 2023-02-10 16:46:13,237 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#member
+[INFO ] 2023-02-10 16:46:13,237 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#index
+[INFO ] 2023-02-10 16:46:13,238 [http-nio-7200-exec-10 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#strSplit
+[INFO ] 2023-02-10 16:46:13,238 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'mongodb'
+[INFO ] 2023-02-10 16:46:13,245 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications'
+[INFO ] 2023-02-10 16:46:13,246 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications-logger'
+[INFO ] 2023-02-10 16:46:13,247 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'plugincontrol'
+[INFO ] 2023-02-10 16:46:13,249 [http-nio-7200-exec-10 | c.o.t.p.p.PluginControlPlugin] Plugin:plugincontrol initialized
+[INFO ] 2023-02-10 16:46:13,249 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'proof'
+[INFO ] 2023-02-10 16:46:13,250 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'rdfrank'
+[INFO ] 2023-02-10 16:46:13,257 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'script'
+[INFO ] 2023-02-10 16:46:13,258 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'sequences'
+[INFO ] 2023-02-10 16:46:13,259 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'similarity'
+[INFO ] 2023-02-10 16:46:13,263 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'solr-connector'
+[INFO ] 2023-02-10 16:46:13,275 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-mm'
+[INFO ] 2023-02-10 16:46:13,322 [http-nio-7200-exec-10 | c.o.g.s.FunctionLoader] Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+[INFO ] 2023-02-10 16:46:13,323 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-template'
+[INFO ] 2023-02-10 16:46:13,324 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'text-mining'
+[INFO ] 2023-02-10 16:46:13,326 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'tx-rollback'
+[INFO ] 2023-02-10 16:46:13,327 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Initializing plugin 'utils'
+[INFO ] 2023-02-10 16:46:14,336 [http-nio-7200-exec-10 | c.o.t.s.i.PluginManager] Finished initializing plugins
+[INFO ] 2023-02-10 16:46:14,340 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 16:46:14,472 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'do.resolve.entities' to default value 'true'
+[INFO ] 2023-02-10 16:46:14,473 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'do.load.data' to default value 'true'
+[INFO ] 2023-02-10 16:46:14,473 [http-nio-7200-exec-10 | c.o.r.p.ParallelLoader] Data will be parsed + resolved + loaded.
+[INFO ] 2023-02-10 16:46:14,474 [http-nio-7200-exec-10 | c.o.c.AbstractParameter] Configured parameter 'graphdb.persistent.parallel.inferencers' to default value 'false'
+[INFO ] 2023-02-10 16:46:14,525 [http-nio-7200-exec-10 | c.o.r.p.ParallelLoader] Using 1 threads for inference
+[INFO ] 2023-02-10 16:46:14,693 [repositories/interaction_context | o.e.r.h.s.r.n.NamespacesController] GET namespace list
+[INFO ] 2023-02-10 16:46:14,747 [repositories/interaction_context | c.o.c.AbstractParameter] Configured parameter 'custom.validation.queries.file' to default value 'null'
+[INFO ] 2023-02-10 16:46:14,896 [repositories/interaction_context | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:46:15,266 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'deduplicate.construct' to default value 'true'
+[INFO ] 2023-02-10 16:46:15,339 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'reuse.vars.in.subselects' to default value 'true'
+[INFO ] 2023-02-10 16:46:15,391 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'in-clause-max-members' to default value '16'
+[INFO ] 2023-02-10 16:46:15,391 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'query.convert.values.clause' to default value 'true'
+[INFO ] 2023-02-10 16:46:15,423 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'merge.join' to default value 'false'
+[INFO ] 2023-02-10 16:46:51,320 [repositories/interaction_context | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:46:51,430 [http-nio-7200-exec-5 | c.o.c.AbstractParameter] Configured parameter 'hash.join' to default value 'false'
+[INFO ] 2023-02-10 16:46:51,496 [http-nio-7200-exec-5 | c.o.c.AbstractParameter] Configured parameter 'default.min.distinct.threshold' to default value '250.0M'
+[INFO ] 2023-02-10 16:49:55,812 [http-nio-7200-exec-4 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:55,942 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:55,968 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:56,019 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,096 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,104 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,303 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,435 [http-nio-7200-exec-6 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:56,457 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:56,466 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:56,474 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,504 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,510 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,612 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,663 [http-nio-7200-exec-1 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:56,680 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:56,685 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:56,697 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,722 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,727 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,812 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,864 [http-nio-7200-exec-6 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:56,875 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:56,878 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:56,885 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:56,903 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:56,908 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,004 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,061 [http-nio-7200-exec-2 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:57,073 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:57,077 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:57,085 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,115 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,125 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,209 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,263 [http-nio-7200-exec-10 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:57,272 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:57,280 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:57,287 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,298 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,304 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,366 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,410 [http-nio-7200-exec-3 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:57,434 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:57,440 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:57,447 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,464 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,468 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:57,545 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:57,607 [http-nio-7200-exec-2 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:57,620 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:57,624 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:57,642 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:58,006 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:58,011 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:58,047 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:58,097 [http-nio-7200-exec-7 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:49:58,118 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:49:58,122 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:49:58,135 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:58,417 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:49:58,423 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:49:58,461 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:01,077 [http-nio-7200-exec-1 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:01,090 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:01,094 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:01,103 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:11,495 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:11,500 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:11,598 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:12,552 [http-nio-7200-exec-7 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:12,567 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:12,571 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:12,578 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:15,120 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:15,125 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:15,232 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:15,850 [http-nio-7200-exec-2 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:15,858 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:15,878 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:15,890 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:18,646 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:18,653 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:18,705 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:19,348 [http-nio-7200-exec-4 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:19,358 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:19,364 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:19,371 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:21,976 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:21,980 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:22,035 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:22,461 [http-nio-7200-exec-5 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:22,468 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:22,471 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:22,481 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:24,849 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:24,864 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:25,058 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:25,458 [http-nio-7200-exec-10 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:25,469 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:25,479 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:25,486 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:27,976 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:27,980 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:28,150 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:28,608 [http-nio-7200-exec-9 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:28,616 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:28,622 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:28,627 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:30,778 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:30,785 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:30,924 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:31,406 [http-nio-7200-exec-2 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:31,416 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:31,420 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:31,434 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:33,636 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:33,641 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:33,720 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:34,121 [http-nio-7200-exec-1 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:34,129 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:34,132 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:34,141 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:36,189 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:36,197 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:36,348 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:36,759 [http-nio-7200-exec-4 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:36,770 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:36,773 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:36,778 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:39,107 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:39,111 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:39,228 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:39,721 [http-nio-7200-exec-7 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:39,730 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:39,734 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:39,753 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:41,805 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:41,810 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:41,944 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:42,160 [http-nio-7200-exec-10 | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 16:50:42,169 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] POST transaction start
+[INFO ] 2023-02-10 16:50:42,172 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionStartController] transaction started
+[INFO ] 2023-02-10 16:50:42,194 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:43,313 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:50:43,317 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation
+[INFO ] 2023-02-10 16:50:43,364 [repositories/interaction_context | o.e.r.h.s.r.t.TransactionController] PUT txn operation request finished.
+[INFO ] 2023-02-10 16:57:14,447 [Thread-3 | c.o.g.s.GraphDB] Stopping GraphDB.
+[INFO ] 2023-02-10 16:57:14,582 [Thread-3 | c.o.f.c.s.SemanticDataManagement] Shutting down current semantic location
+[INFO ] 2023-02-10 17:03:56,807 [main | c.o.g.Config] Using 'jar:file:/opt/graphdb/dist/lib/graphdb-application-common-10.0.0.jar!/com/ontotext/graphdb/logback.xml' as logback's configuration file
+[INFO ] 2023-02-10 17:03:59,099 [main | c.o.g.s.GraphDB] Starting GraphDB in workbench mode.
+[INFO ] 2023-02-10 17:04:20,058 [main | c.o.g.Config] GraphDB Home directory: /opt/graphdb/home
+[INFO ] 2023-02-10 17:04:20,059 [main | c.o.g.Config] GraphDB Config directory: /opt/graphdb/home/conf
+[INFO ] 2023-02-10 17:04:20,060 [main | c.o.g.Config] GraphDB Data directory: /opt/graphdb/home/data
+[INFO ] 2023-02-10 17:04:20,061 [main | c.o.g.Config] GraphDB Work directory: /opt/graphdb/home/work
+[INFO ] 2023-02-10 17:04:20,062 [main | c.o.g.Config] GraphDB Logs directory: /opt/graphdb/home/logs
+[INFO ] 2023-02-10 17:04:20,746 [main | c.o.g.r.s.SecurityUtil] Cluster gRPC server security is disabled
+[INFO ] 2023-02-10 17:04:21,221 [main | c.o.f.c.s.r.GraphDBRpcServer] Started gRPC server on port 7300 successfully
+[INFO ] 2023-02-10 17:04:24,815 [main | c.o.g.s.GraphDB] Started GraphDB in workbench mode at port 7200.
+[INFO ] 2023-02-10 17:04:52,681 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Version: 10.0, revision: 580949524
+[INFO ] 2023-02-10 17:04:52,682 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Build date: Wed Jun 29 19:29:19 GMT 2022
+[INFO ] 2023-02-10 17:04:52,692 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Started repository interaction_context in READ/WRITE mode.
+[INFO ] 2023-02-10 17:04:52,700 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'partialRDFS' to default value 'false'
+[INFO ] 2023-02-10 17:04:52,701 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'transaction-isolation' to default value 'true'
+[INFO ] 2023-02-10 17:04:52,702 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'checkForValidPropertiesAndClasses' to default value 'false'
+[INFO ] 2023-02-10 17:04:52,702 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'transaction-mode' to default value 'safe'
+[INFO ] 2023-02-10 17:04:52,703 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'entity-pool-implementation' to default value 'transactional'
+[INFO ] 2023-02-10 17:04:52,703 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'useShutdownHooks' to default value 'true'
+[INFO ] 2023-02-10 17:04:52,712 [http-nio-7200-exec-1 | c.o.GraphDBConfigParameters] Cache pages for tuples: 7829
+[INFO ] 2023-02-10 17:04:52,713 [http-nio-7200-exec-1 | c.o.GraphDBConfigParameters] Cache pages for predicates: 1118
+[INFO ] 2023-02-10 17:04:52,715 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:04:52,740 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:04:52,741 [http-nio-7200-exec-1 | c.o.t.e.EntityPoolFactory] Using entity pool implementation: transactional-disk
+[INFO ] 2023-02-10 17:04:52,744 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'epool.connection.cache.size' to default value '2000'
+[INFO ] 2023-02-10 17:04:52,751 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:04:52,795 [http-nio-7200-exec-1 | c.o.t.e.i.m.PersistedHashMap] Restoring entity hash table...
+[INFO ] 2023-02-10 17:04:52,873 [http-nio-7200-exec-1 | c.o.t.e.i.m.PersistedHashMap] Restored 25520 entities allocating 12.0 MB
+[INFO ] 2023-02-10 17:04:52,877 [http-nio-7200-exec-1 | c.o.t.e.i.m.PersistedHashMap] Done in 77 ms.
+[INFO ] 2023-02-10 17:04:52,918 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'enable-pool-reversecache' to default value 'true'
+[INFO ] 2023-02-10 17:04:52,933 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'allow-system-entities-as-data' to default value 'false'
+[INFO ] 2023-02-10 17:04:52,936 [http-nio-7200-exec-1 | c.o.t.u.l.LimitedObjectCacheFactory] Using LRU cache type: synch
+[INFO ] 2023-02-10 17:04:52,945 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'cache-ratio-so-os-cso-cos' to default value '[50, 50, 50]'
+[INFO ] 2023-02-10 17:04:52,980 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:04:52,983 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:04:53,169 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'virtual.repository.mode' to default value 'false'
+[WARN ] 2023-02-10 17:04:53,244 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Rule list configuration present, it will override all other rule sets parameters!
+[INFO ] 2023-02-10 17:04:53,316 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'epool.journal.buffer.size' to default value '1024'
+[INFO ] 2023-02-10 17:04:53,334 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'enable-debug-rules' to default value 'false'
+[INFO ] 2023-02-10 17:04:53,351 [http-nio-7200-exec-1 | c.o.t.InferencerFactory] ruleSet=rdfsplus-optimized, partialRdfs=false
+[INFO ] 2023-02-10 17:04:53,362 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'filter.obj.only.hint' to default value 'true'
+[INFO ] 2023-02-10 17:04:53,413 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'check.pred.stats' to default value 'false'
+[WARN ] 2023-02-10 17:04:53,458 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] number of entities mismatch between owlim.properties and actual value from the storage
+[INFO ] 2023-02-10 17:04:53,470 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'disable-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:04:53,470 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'skip-default-plugins' to default value 'false'
+[INFO ] 2023-02-10 17:04:53,471 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Searching for plugins available in the classpath...
+[INFO ] 2023-02-10 17:04:53,512 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin direct
+[INFO ] 2023-02-10 17:04:53,513 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin notifications
+[INFO ] 2023-02-10 17:04:53,513 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin expose-entity
+[INFO ] 2023-02-10 17:04:53,514 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin literals-index
+[INFO ] 2023-02-10 17:04:53,515 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin script
+[INFO ] 2023-02-10 17:04:53,515 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin utils
+[INFO ] 2023-02-10 17:04:53,515 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin plugincontrol
+[INFO ] 2023-02-10 17:04:53,516 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin magic-predicates
+[INFO ] 2023-02-10 17:04:53,516 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin sparql-template
+[INFO ] 2023-02-10 17:04:53,516 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'register-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:04:53,522 [http-nio-7200-exec-1 | c.o.GraphDBConfigParameters] Reading external plugins from /opt/graphdb/dist/lib/plugins
+[INFO ] 2023-02-10 17:04:53,523 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'register-external-plugins' to default value '[/opt/graphdb/dist/lib/plugins]'
+[INFO ] 2023-02-10 17:04:53,524 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Registering external plugins...
+[INFO ] 2023-02-10 17:04:53,525 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/history-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,537 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin history
+[INFO ] 2023-02-10 17:04:53,537 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sequences-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,544 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin sequences
+[INFO ] 2023-02-10 17:04:53,545 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/similarity-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,574 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin similarity
+[INFO ] 2023-02-10 17:04:53,575 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/autocomplete-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,583 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin autocomplete
+[INFO ] 2023-02-10 17:04:53,583 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/entity-change-connector for plugins
+[INFO ] 2023-02-10 17:04:53,624 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin entity-change
+[INFO ] 2023-02-10 17:04:53,625 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geosparql-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,666 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin GeoSPARQL
+[INFO ] 2023-02-10 17:04:53,667 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/solr-connector for plugins
+[INFO ] 2023-02-10 17:04:53,712 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin solr-connector
+[INFO ] 2023-02-10 17:04:53,713 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/elasticsearch-connector for plugins
+[INFO ] 2023-02-10 17:04:53,770 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin elasticsearch-connector
+[INFO ] 2023-02-10 17:04:53,770 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/tx-rollback-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,772 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin tx-rollback
+[INFO ] 2023-02-10 17:04:53,772 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sparql-mm for plugins
+[INFO ] 2023-02-10 17:04:53,774 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin sparql-mm
+[INFO ] 2023-02-10 17:04:53,774 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/notifications-logger-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,776 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin notifications-logger
+[INFO ] 2023-02-10 17:04:53,777 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/proof-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,781 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin proof
+[INFO ] 2023-02-10 17:04:53,781 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/dependencies-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,787 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin dependencies-plugin
+[INFO ] 2023-02-10 17:04:53,787 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/change-tracking-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,793 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin change-tracking
+[INFO ] 2023-02-10 17:04:53,794 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/rdfrank-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,801 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin rdfrank
+[INFO ] 2023-02-10 17:04:53,801 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/kafka-connector for plugins
+[INFO ] 2023-02-10 17:04:53,829 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin kafka-connector
+[INFO ] 2023-02-10 17:04:53,829 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/mongodb-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,836 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin mongodb
+[INFO ] 2023-02-10 17:04:53,836 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/text-mining-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,843 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin text-mining
+[INFO ] 2023-02-10 17:04:53,844 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geospatial-plugin for plugins
+[INFO ] 2023-02-10 17:04:53,961 [http-nio-7200-exec-1 | c.o.t.p.g.FunctionLoader] Registered 1 functions from package com.ontotext.trree.plugin.geo.
+[INFO ] 2023-02-10 17:04:53,961 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin geospatial
+[INFO ] 2023-02-10 17:04:53,962 [http-nio-7200-exec-1 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/lucene-connector for plugins
+[INFO ] 2023-02-10 17:04:54,021 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Registering plugin lucene-connector
+[INFO ] 2023-02-10 17:04:54,022 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugins... (DEFAULT)
+[INFO ] 2023-02-10 17:04:54,035 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] License configuration: Embedded license
+[INFO ] 2023-02-10 17:04:54,036 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] License file: jar:file:/opt/graphdb/dist/lib/graphdb-runtime-10.0.0.jar!/GRAPHDB_LITE.license
+[INFO ] 2023-02-10 17:04:54,046 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Product:                 GRAPHDB_LITE
+[INFO ] 2023-02-10 17:04:54,047 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Usage restriction:       null
+[INFO ] 2023-02-10 17:04:54,048 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Licensee:                Freeware
+[INFO ] 2023-02-10 17:04:54,048 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[INFO ] 2023-02-10 17:04:54,049 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Version:                 10.0
+[INFO ] 2023-02-10 17:04:54,049 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Expiry date:             none
+[INFO ] 2023-02-10 17:04:54,051 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Latest publication date: none
+[INFO ] 2023-02-10 17:04:54,051 [http-nio-7200-exec-1 | c.o.l.LicenseRegistry] Max CPU cores:           1
+[INFO ] 2023-02-10 17:04:54,055 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'nonInterpretablePredicates' to default value 'null'
+[INFO ] 2023-02-10 17:04:54,066 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'GeoSPARQL'
+[INFO ] 2023-02-10 17:04:55,508 [http-nio-7200-exec-1 | c.o.t.g.FunctionLoader] Registered 50 functions from package com.useekm.geosparql.
+[INFO ] 2023-02-10 17:04:55,511 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'autocomplete'
+[INFO ] 2023-02-10 17:04:55,513 [http-nio-7200-exec-1 | c.o.t.p.a.AutocompletePluginUtils] >>>>>>>> AutocompletePlugin: No configuration file found at /opt/graphdb/home/data/repositories/interaction_context/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+[INFO ] 2023-02-10 17:04:55,525 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'change-tracking'
+[INFO ] 2023-02-10 17:04:55,551 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'dependencies-plugin'
+[INFO ] 2023-02-10 17:04:55,554 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'direct'
+[INFO ] 2023-02-10 17:04:55,556 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'elasticsearch-connector'
+[INFO ] 2023-02-10 17:04:55,582 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'entity-change'
+[INFO ] 2023-02-10 17:04:55,595 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'expose-entity'
+[INFO ] 2023-02-10 17:04:55,597 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'geospatial'
+[INFO ] 2023-02-10 17:04:55,598 [http-nio-7200-exec-1 | c.o.t.p.g.GeoSpatialPlugin] Plugin:geospatial initialized
+[INFO ] 2023-02-10 17:04:55,599 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'history'
+[INFO ] 2023-02-10 17:04:55,614 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'kafka-connector'
+[INFO ] 2023-02-10 17:04:55,629 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'literals-index'
+[INFO ] 2023-02-10 17:04:55,638 [http-nio-7200-exec-1 | c.o.p.literals-index] Literals indices restored.
+[INFO ] 2023-02-10 17:04:55,644 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'lucene-connector'
+[INFO ] 2023-02-10 17:04:55,668 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'magic-predicates'
+[INFO ] 2023-02-10 17:04:55,669 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#foreach
+[INFO ] 2023-02-10 17:04:55,670 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#length
+[INFO ] 2023-02-10 17:04:55,670 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#concat
+[INFO ] 2023-02-10 17:04:55,670 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#for
+[INFO ] 2023-02-10 17:04:55,671 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#split
+[INFO ] 2023-02-10 17:04:55,671 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#member
+[INFO ] 2023-02-10 17:04:55,671 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#index
+[INFO ] 2023-02-10 17:04:55,672 [http-nio-7200-exec-1 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#strSplit
+[INFO ] 2023-02-10 17:04:55,673 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'mongodb'
+[INFO ] 2023-02-10 17:04:55,674 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications'
+[INFO ] 2023-02-10 17:04:55,675 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications-logger'
+[INFO ] 2023-02-10 17:04:55,675 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'plugincontrol'
+[INFO ] 2023-02-10 17:04:55,677 [http-nio-7200-exec-1 | c.o.t.p.p.PluginControlPlugin] Plugin:plugincontrol initialized
+[INFO ] 2023-02-10 17:04:55,678 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'proof'
+[INFO ] 2023-02-10 17:04:55,679 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'rdfrank'
+[INFO ] 2023-02-10 17:04:55,683 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'script'
+[INFO ] 2023-02-10 17:04:55,684 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'sequences'
+[INFO ] 2023-02-10 17:04:55,685 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'similarity'
+[INFO ] 2023-02-10 17:04:55,690 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'solr-connector'
+[INFO ] 2023-02-10 17:04:55,699 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-mm'
+[INFO ] 2023-02-10 17:04:55,730 [http-nio-7200-exec-1 | c.o.g.s.FunctionLoader] Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+[INFO ] 2023-02-10 17:04:55,731 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-template'
+[INFO ] 2023-02-10 17:04:55,732 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'text-mining'
+[INFO ] 2023-02-10 17:04:55,733 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'tx-rollback'
+[INFO ] 2023-02-10 17:04:55,734 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Initializing plugin 'utils'
+[INFO ] 2023-02-10 17:04:56,243 [http-nio-7200-exec-1 | c.o.t.s.i.PluginManager] Finished initializing plugins
+[INFO ] 2023-02-10 17:04:56,245 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:04:56,314 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'do.resolve.entities' to default value 'true'
+[INFO ] 2023-02-10 17:04:56,315 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'do.load.data' to default value 'true'
+[INFO ] 2023-02-10 17:04:56,315 [http-nio-7200-exec-1 | c.o.r.p.ParallelLoader] Data will be parsed + resolved + loaded.
+[INFO ] 2023-02-10 17:04:56,316 [http-nio-7200-exec-1 | c.o.c.AbstractParameter] Configured parameter 'graphdb.persistent.parallel.inferencers' to default value 'false'
+[INFO ] 2023-02-10 17:04:56,367 [http-nio-7200-exec-1 | c.o.r.p.ParallelLoader] Using 1 threads for inference
+[INFO ] 2023-02-10 17:07:24,462 [Thread-3 | c.o.g.s.GraphDB] Stopping GraphDB.
+[INFO ] 2023-02-10 17:07:24,652 [Thread-3 | c.o.f.c.s.SemanticDataManagement] Shutting down current semantic location
+[INFO ] 2023-02-10 17:09:13,157 [main | c.o.g.Config] Using 'jar:file:/opt/graphdb/dist/lib/graphdb-application-common-10.0.0.jar!/com/ontotext/graphdb/logback.xml' as logback's configuration file
+[INFO ] 2023-02-10 17:09:15,454 [main | c.o.g.s.GraphDB] Starting GraphDB in workbench mode.
+[INFO ] 2023-02-10 17:09:36,374 [main | c.o.g.Config] GraphDB Home directory: /opt/graphdb/home
+[INFO ] 2023-02-10 17:09:36,375 [main | c.o.g.Config] GraphDB Config directory: /opt/graphdb/home/conf
+[INFO ] 2023-02-10 17:09:36,380 [main | c.o.g.Config] GraphDB Data directory: /opt/graphdb/home/data
+[INFO ] 2023-02-10 17:09:36,382 [main | c.o.g.Config] GraphDB Work directory: /opt/graphdb/home/work
+[INFO ] 2023-02-10 17:09:36,383 [main | c.o.g.Config] GraphDB Logs directory: /opt/graphdb/home/logs
+[INFO ] 2023-02-10 17:09:37,098 [main | c.o.g.r.s.SecurityUtil] Cluster gRPC server security is disabled
+[INFO ] 2023-02-10 17:09:37,519 [main | c.o.f.c.s.r.GraphDBRpcServer] Started gRPC server on port 7300 successfully
+[INFO ] 2023-02-10 17:09:41,325 [main | c.o.g.s.GraphDB] Started GraphDB in workbench mode at port 7200.
+[INFO ] 2023-02-10 17:09:52,727 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Version: 10.0, revision: 580949524
+[INFO ] 2023-02-10 17:09:52,728 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Build date: Wed Jun 29 19:29:19 GMT 2022
+[INFO ] 2023-02-10 17:09:52,738 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Started repository interaction_context in READ/WRITE mode.
+[INFO ] 2023-02-10 17:09:52,746 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'partialRDFS' to default value 'false'
+[INFO ] 2023-02-10 17:09:52,747 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'transaction-isolation' to default value 'true'
+[INFO ] 2023-02-10 17:09:52,747 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'checkForValidPropertiesAndClasses' to default value 'false'
+[INFO ] 2023-02-10 17:09:52,748 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'transaction-mode' to default value 'safe'
+[INFO ] 2023-02-10 17:09:52,748 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'entity-pool-implementation' to default value 'transactional'
+[INFO ] 2023-02-10 17:09:52,749 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'useShutdownHooks' to default value 'true'
+[INFO ] 2023-02-10 17:09:52,756 [http-nio-7200-exec-2 | c.o.GraphDBConfigParameters] Cache pages for tuples: 7829
+[INFO ] 2023-02-10 17:09:52,757 [http-nio-7200-exec-2 | c.o.GraphDBConfigParameters] Cache pages for predicates: 1118
+[INFO ] 2023-02-10 17:09:52,759 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:09:52,785 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:09:52,786 [http-nio-7200-exec-2 | c.o.t.e.EntityPoolFactory] Using entity pool implementation: transactional-disk
+[INFO ] 2023-02-10 17:09:52,789 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'epool.connection.cache.size' to default value '2000'
+[INFO ] 2023-02-10 17:09:52,797 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:09:52,848 [http-nio-7200-exec-2 | c.o.t.e.i.m.PersistedHashMap] Restoring entity hash table...
+[INFO ] 2023-02-10 17:09:52,928 [http-nio-7200-exec-2 | c.o.t.e.i.m.PersistedHashMap] Restored 25520 entities allocating 12.0 MB
+[INFO ] 2023-02-10 17:09:52,932 [http-nio-7200-exec-2 | c.o.t.e.i.m.PersistedHashMap] Done in 79 ms.
+[INFO ] 2023-02-10 17:09:52,977 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'enable-pool-reversecache' to default value 'true'
+[INFO ] 2023-02-10 17:09:52,993 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'allow-system-entities-as-data' to default value 'false'
+[INFO ] 2023-02-10 17:09:52,998 [http-nio-7200-exec-2 | c.o.t.u.l.LimitedObjectCacheFactory] Using LRU cache type: synch
+[INFO ] 2023-02-10 17:09:53,009 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'cache-ratio-so-os-cso-cos' to default value '[50, 50, 50]'
+[INFO ] 2023-02-10 17:09:53,053 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:09:53,057 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:09:53,265 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'virtual.repository.mode' to default value 'false'
+[WARN ] 2023-02-10 17:09:53,357 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Rule list configuration present, it will override all other rule sets parameters!
+[INFO ] 2023-02-10 17:09:53,454 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'epool.journal.buffer.size' to default value '1024'
+[INFO ] 2023-02-10 17:09:53,472 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'enable-debug-rules' to default value 'false'
+[INFO ] 2023-02-10 17:09:53,497 [http-nio-7200-exec-2 | c.o.t.InferencerFactory] ruleSet=rdfsplus-optimized, partialRdfs=false
+[INFO ] 2023-02-10 17:09:53,508 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'filter.obj.only.hint' to default value 'true'
+[INFO ] 2023-02-10 17:09:53,587 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'check.pred.stats' to default value 'false'
+[INFO ] 2023-02-10 17:09:53,659 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'disable-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:09:53,660 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'skip-default-plugins' to default value 'false'
+[INFO ] 2023-02-10 17:09:53,661 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Searching for plugins available in the classpath...
+[INFO ] 2023-02-10 17:09:53,701 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin direct
+[INFO ] 2023-02-10 17:09:53,702 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin notifications
+[INFO ] 2023-02-10 17:09:53,704 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin expose-entity
+[INFO ] 2023-02-10 17:09:53,704 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin literals-index
+[INFO ] 2023-02-10 17:09:53,705 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin script
+[INFO ] 2023-02-10 17:09:53,706 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin utils
+[INFO ] 2023-02-10 17:09:53,706 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin plugincontrol
+[INFO ] 2023-02-10 17:09:53,706 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin magic-predicates
+[INFO ] 2023-02-10 17:09:53,706 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin sparql-template
+[INFO ] 2023-02-10 17:09:53,707 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'register-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:09:53,710 [http-nio-7200-exec-2 | c.o.GraphDBConfigParameters] Reading external plugins from /opt/graphdb/dist/lib/plugins
+[INFO ] 2023-02-10 17:09:53,710 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'register-external-plugins' to default value '[/opt/graphdb/dist/lib/plugins]'
+[INFO ] 2023-02-10 17:09:53,710 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Registering external plugins...
+[INFO ] 2023-02-10 17:09:53,712 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/history-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,725 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin history
+[INFO ] 2023-02-10 17:09:53,725 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sequences-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,733 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin sequences
+[INFO ] 2023-02-10 17:09:53,733 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/similarity-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,752 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin similarity
+[INFO ] 2023-02-10 17:09:53,757 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/autocomplete-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,773 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin autocomplete
+[INFO ] 2023-02-10 17:09:53,773 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/entity-change-connector for plugins
+[INFO ] 2023-02-10 17:09:53,815 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin entity-change
+[INFO ] 2023-02-10 17:09:53,815 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geosparql-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,863 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin GeoSPARQL
+[INFO ] 2023-02-10 17:09:53,863 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/solr-connector for plugins
+[INFO ] 2023-02-10 17:09:53,911 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin solr-connector
+[INFO ] 2023-02-10 17:09:53,911 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/elasticsearch-connector for plugins
+[INFO ] 2023-02-10 17:09:53,975 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin elasticsearch-connector
+[INFO ] 2023-02-10 17:09:53,976 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/tx-rollback-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,983 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin tx-rollback
+[INFO ] 2023-02-10 17:09:53,983 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sparql-mm for plugins
+[INFO ] 2023-02-10 17:09:53,985 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin sparql-mm
+[INFO ] 2023-02-10 17:09:53,986 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/notifications-logger-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,990 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin notifications-logger
+[INFO ] 2023-02-10 17:09:53,990 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/proof-plugin for plugins
+[INFO ] 2023-02-10 17:09:53,994 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin proof
+[INFO ] 2023-02-10 17:09:53,994 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/dependencies-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,001 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin dependencies-plugin
+[INFO ] 2023-02-10 17:09:54,001 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/change-tracking-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,005 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin change-tracking
+[INFO ] 2023-02-10 17:09:54,008 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/rdfrank-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,015 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin rdfrank
+[INFO ] 2023-02-10 17:09:54,015 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/kafka-connector for plugins
+[INFO ] 2023-02-10 17:09:54,046 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin kafka-connector
+[INFO ] 2023-02-10 17:09:54,046 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/mongodb-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,054 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin mongodb
+[INFO ] 2023-02-10 17:09:54,054 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/text-mining-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,062 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin text-mining
+[INFO ] 2023-02-10 17:09:54,063 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geospatial-plugin for plugins
+[INFO ] 2023-02-10 17:09:54,180 [http-nio-7200-exec-2 | c.o.t.p.g.FunctionLoader] Registered 1 functions from package com.ontotext.trree.plugin.geo.
+[INFO ] 2023-02-10 17:09:54,181 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin geospatial
+[INFO ] 2023-02-10 17:09:54,182 [http-nio-7200-exec-2 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/lucene-connector for plugins
+[INFO ] 2023-02-10 17:09:54,232 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Registering plugin lucene-connector
+[INFO ] 2023-02-10 17:09:54,233 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugins... (DEFAULT)
+[INFO ] 2023-02-10 17:09:54,243 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] License configuration: Embedded license
+[INFO ] 2023-02-10 17:09:54,244 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] License file: jar:file:/opt/graphdb/dist/lib/graphdb-runtime-10.0.0.jar!/GRAPHDB_LITE.license
+[INFO ] 2023-02-10 17:09:54,247 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Product:                 GRAPHDB_LITE
+[INFO ] 2023-02-10 17:09:54,247 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Usage restriction:       null
+[INFO ] 2023-02-10 17:09:54,247 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Licensee:                Freeware
+[INFO ] 2023-02-10 17:09:54,247 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[INFO ] 2023-02-10 17:09:54,248 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Version:                 10.0
+[INFO ] 2023-02-10 17:09:54,248 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Expiry date:             none
+[INFO ] 2023-02-10 17:09:54,248 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Latest publication date: none
+[INFO ] 2023-02-10 17:09:54,248 [http-nio-7200-exec-2 | c.o.l.LicenseRegistry] Max CPU cores:           1
+[INFO ] 2023-02-10 17:09:54,252 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'nonInterpretablePredicates' to default value 'null'
+[INFO ] 2023-02-10 17:09:54,266 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'GeoSPARQL'
+[INFO ] 2023-02-10 17:09:55,963 [http-nio-7200-exec-2 | c.o.t.g.FunctionLoader] Registered 50 functions from package com.useekm.geosparql.
+[INFO ] 2023-02-10 17:09:55,965 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'autocomplete'
+[INFO ] 2023-02-10 17:09:55,967 [http-nio-7200-exec-2 | c.o.t.p.a.AutocompletePluginUtils] >>>>>>>> AutocompletePlugin: No configuration file found at /opt/graphdb/home/data/repositories/interaction_context/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+[INFO ] 2023-02-10 17:09:55,977 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'change-tracking'
+[INFO ] 2023-02-10 17:09:56,001 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'dependencies-plugin'
+[INFO ] 2023-02-10 17:09:56,004 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'direct'
+[INFO ] 2023-02-10 17:09:56,005 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'elasticsearch-connector'
+[INFO ] 2023-02-10 17:09:56,020 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'entity-change'
+[INFO ] 2023-02-10 17:09:56,029 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'expose-entity'
+[INFO ] 2023-02-10 17:09:56,030 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'geospatial'
+[INFO ] 2023-02-10 17:09:56,035 [http-nio-7200-exec-2 | c.o.t.p.g.GeoSpatialPlugin] Plugin:geospatial initialized
+[INFO ] 2023-02-10 17:09:56,035 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'history'
+[INFO ] 2023-02-10 17:09:56,043 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'kafka-connector'
+[INFO ] 2023-02-10 17:09:56,057 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'literals-index'
+[INFO ] 2023-02-10 17:09:56,067 [http-nio-7200-exec-2 | c.o.p.literals-index] Literals indices restored.
+[INFO ] 2023-02-10 17:09:56,068 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'lucene-connector'
+[INFO ] 2023-02-10 17:09:56,077 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'magic-predicates'
+[INFO ] 2023-02-10 17:09:56,078 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#foreach
+[INFO ] 2023-02-10 17:09:56,079 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#length
+[INFO ] 2023-02-10 17:09:56,079 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#concat
+[INFO ] 2023-02-10 17:09:56,080 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#for
+[INFO ] 2023-02-10 17:09:56,080 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#split
+[INFO ] 2023-02-10 17:09:56,080 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#member
+[INFO ] 2023-02-10 17:09:56,081 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#index
+[INFO ] 2023-02-10 17:09:56,081 [http-nio-7200-exec-2 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#strSplit
+[INFO ] 2023-02-10 17:09:56,081 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'mongodb'
+[INFO ] 2023-02-10 17:09:56,082 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications'
+[INFO ] 2023-02-10 17:09:56,082 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications-logger'
+[INFO ] 2023-02-10 17:09:56,083 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'plugincontrol'
+[INFO ] 2023-02-10 17:09:56,084 [http-nio-7200-exec-2 | c.o.t.p.p.PluginControlPlugin] Plugin:plugincontrol initialized
+[INFO ] 2023-02-10 17:09:56,084 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'proof'
+[INFO ] 2023-02-10 17:09:56,085 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'rdfrank'
+[INFO ] 2023-02-10 17:09:56,089 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'script'
+[INFO ] 2023-02-10 17:09:56,090 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'sequences'
+[INFO ] 2023-02-10 17:09:56,090 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'similarity'
+[INFO ] 2023-02-10 17:09:56,094 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'solr-connector'
+[INFO ] 2023-02-10 17:09:56,104 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-mm'
+[INFO ] 2023-02-10 17:09:56,135 [http-nio-7200-exec-2 | c.o.g.s.FunctionLoader] Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+[INFO ] 2023-02-10 17:09:56,135 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-template'
+[INFO ] 2023-02-10 17:09:56,136 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'text-mining'
+[INFO ] 2023-02-10 17:09:56,137 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'tx-rollback'
+[INFO ] 2023-02-10 17:09:56,138 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Initializing plugin 'utils'
+[INFO ] 2023-02-10 17:09:56,691 [http-nio-7200-exec-2 | c.o.t.s.i.PluginManager] Finished initializing plugins
+[INFO ] 2023-02-10 17:09:56,693 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:09:56,764 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'do.resolve.entities' to default value 'true'
+[INFO ] 2023-02-10 17:09:56,765 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'do.load.data' to default value 'true'
+[INFO ] 2023-02-10 17:09:56,766 [http-nio-7200-exec-2 | c.o.r.p.ParallelLoader] Data will be parsed + resolved + loaded.
+[INFO ] 2023-02-10 17:09:56,766 [http-nio-7200-exec-2 | c.o.c.AbstractParameter] Configured parameter 'graphdb.persistent.parallel.inferencers' to default value 'false'
+[INFO ] 2023-02-10 17:09:56,825 [http-nio-7200-exec-2 | c.o.r.p.ParallelLoader] Using 1 threads for inference
+[INFO ] 2023-02-10 17:13:49,566 [repositories/interaction_context | o.e.r.h.s.r.n.NamespacesController] GET namespace list
+[INFO ] 2023-02-10 17:13:49,599 [repositories/interaction_context | c.o.c.AbstractParameter] Configured parameter 'custom.validation.queries.file' to default value 'null'
+[INFO ] 2023-02-10 17:13:49,732 [repositories/interaction_context | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 17:13:49,761 [repositories/interaction_context | o.e.r.h.s.r.n.NamespacesController] GET namespace list
+[INFO ] 2023-02-10 17:13:49,769 [repositories/interaction_context | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 17:13:49,933 [http-nio-7200-exec-9 | c.o.c.AbstractParameter] Configured parameter 'deduplicate.construct' to default value 'true'
+[INFO ] 2023-02-10 17:13:49,967 [http-nio-7200-exec-9 | c.o.c.AbstractParameter] Configured parameter 'reuse.vars.in.subselects' to default value 'true'
+[INFO ] 2023-02-10 17:13:49,995 [http-nio-7200-exec-9 | c.o.c.AbstractParameter] Configured parameter 'in-clause-max-members' to default value '16'
+[INFO ] 2023-02-10 17:13:49,996 [http-nio-7200-exec-9 | c.o.c.AbstractParameter] Configured parameter 'query.convert.values.clause' to default value 'true'
+[INFO ] 2023-02-10 17:13:50,007 [http-nio-7200-exec-9 | c.o.c.AbstractParameter] Configured parameter 'merge.join' to default value 'false'
+[INFO ] 2023-02-10 17:13:53,317 [repositories/interaction_context | o.e.r.h.s.r.n.NamespacesController] GET namespace list
+[INFO ] 2023-02-10 17:13:53,321 [repositories/interaction_context | o.e.r.h.s.r.TupleQueryResultView] Request for query 3392903 is finished
+[INFO ] 2023-02-10 17:13:54,923 [repositories/interaction_context | c.o.g.s.h.GraphDBQueryResultHandler] POST query -1712550143
+[INFO ] 2023-02-10 17:13:54,937 [repositories/interaction_context | c.o.c.AbstractParameter] Configured parameter 'hash.join' to default value 'false'
+[INFO ] 2023-02-10 17:13:54,976 [repositories/interaction_context | c.o.g.s.TupleQueryResultView] Request for query -1712550143 is finished
+[INFO ] 2023-02-10 17:16:32,653 [Thread-3 | c.o.g.s.GraphDB] Stopping GraphDB.
+[INFO ] 2023-02-10 17:16:32,839 [Thread-3 | c.o.f.c.s.SemanticDataManagement] Shutting down current semantic location
+[INFO ] 2023-02-10 17:16:47,513 [main | c.o.g.Config] Using 'jar:file:/opt/graphdb/dist/lib/graphdb-application-common-10.0.0.jar!/com/ontotext/graphdb/logback.xml' as logback's configuration file
+[INFO ] 2023-02-10 17:16:49,856 [main | c.o.g.s.GraphDB] Starting GraphDB in workbench mode.
+[INFO ] 2023-02-10 17:17:09,718 [main | c.o.g.Config] GraphDB Home directory: /opt/graphdb/home
+[INFO ] 2023-02-10 17:17:09,719 [main | c.o.g.Config] GraphDB Config directory: /opt/graphdb/home/conf
+[INFO ] 2023-02-10 17:17:09,719 [main | c.o.g.Config] GraphDB Data directory: /opt/graphdb/home/data
+[INFO ] 2023-02-10 17:17:09,720 [main | c.o.g.Config] GraphDB Work directory: /opt/graphdb/home/work
+[INFO ] 2023-02-10 17:17:09,720 [main | c.o.g.Config] GraphDB Logs directory: /opt/graphdb/home/logs
+[INFO ] 2023-02-10 17:17:10,419 [main | c.o.g.r.s.SecurityUtil] Cluster gRPC server security is disabled
+[INFO ] 2023-02-10 17:17:10,850 [main | c.o.f.c.s.r.GraphDBRpcServer] Started gRPC server on port 7300 successfully
+[INFO ] 2023-02-10 17:17:14,949 [main | c.o.g.s.GraphDB] Started GraphDB in workbench mode at port 7200.
+[INFO ] 2023-02-10 17:17:16,275 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Version: 10.0, revision: 580949524
+[INFO ] 2023-02-10 17:17:16,276 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Build date: Wed Jun 29 19:29:19 GMT 2022
+[INFO ] 2023-02-10 17:17:16,286 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Started repository interaction_context in READ/WRITE mode.
+[INFO ] 2023-02-10 17:17:16,302 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'partialRDFS' to default value 'false'
+[INFO ] 2023-02-10 17:17:16,304 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'transaction-isolation' to default value 'true'
+[INFO ] 2023-02-10 17:17:16,304 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'checkForValidPropertiesAndClasses' to default value 'false'
+[INFO ] 2023-02-10 17:17:16,306 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'transaction-mode' to default value 'safe'
+[INFO ] 2023-02-10 17:17:16,306 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'entity-pool-implementation' to default value 'transactional'
+[INFO ] 2023-02-10 17:17:16,307 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'useShutdownHooks' to default value 'true'
+[INFO ] 2023-02-10 17:17:16,323 [http-nio-7200-exec-4 | c.o.GraphDBConfigParameters] Cache pages for tuples: 7829
+[INFO ] 2023-02-10 17:17:16,323 [http-nio-7200-exec-4 | c.o.GraphDBConfigParameters] Cache pages for predicates: 1118
+[INFO ] 2023-02-10 17:17:16,324 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:17:16,354 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:17:16,354 [http-nio-7200-exec-4 | c.o.t.e.EntityPoolFactory] Using entity pool implementation: transactional-disk
+[INFO ] 2023-02-10 17:17:16,357 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'epool.connection.cache.size' to default value '2000'
+[INFO ] 2023-02-10 17:17:16,362 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.epool.onheap' to default value 'false'
+[INFO ] 2023-02-10 17:17:16,396 [http-nio-7200-exec-4 | c.o.t.e.i.m.PersistedHashMap] Restoring entity hash table...
+[INFO ] 2023-02-10 17:17:16,457 [http-nio-7200-exec-4 | c.o.t.e.i.m.PersistedHashMap] Restored 25520 entities allocating 12.0 MB
+[INFO ] 2023-02-10 17:17:16,461 [http-nio-7200-exec-4 | c.o.t.e.i.m.PersistedHashMap] Done in 60 ms.
+[INFO ] 2023-02-10 17:17:16,496 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'enable-pool-reversecache' to default value 'true'
+[INFO ] 2023-02-10 17:17:16,509 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'allow-system-entities-as-data' to default value 'false'
+[INFO ] 2023-02-10 17:17:16,511 [http-nio-7200-exec-4 | c.o.t.u.l.LimitedObjectCacheFactory] Using LRU cache type: synch
+[INFO ] 2023-02-10 17:17:16,519 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'cache-ratio-so-os-cso-cos' to default value '[50, 50, 50]'
+[INFO ] 2023-02-10 17:17:16,568 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.global.page.cache' to default value 'true'
+[INFO ] 2023-02-10 17:17:16,570 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:17:16,819 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'virtual.repository.mode' to default value 'false'
+[WARN ] 2023-02-10 17:17:16,935 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Rule list configuration present, it will override all other rule sets parameters!
+[INFO ] 2023-02-10 17:17:16,988 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'epool.journal.buffer.size' to default value '1024'
+[INFO ] 2023-02-10 17:17:17,002 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'enable-debug-rules' to default value 'false'
+[INFO ] 2023-02-10 17:17:17,020 [http-nio-7200-exec-4 | c.o.t.InferencerFactory] ruleSet=rdfsplus-optimized, partialRdfs=false
+[INFO ] 2023-02-10 17:17:17,037 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'filter.obj.only.hint' to default value 'true'
+[INFO ] 2023-02-10 17:17:17,099 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'check.pred.stats' to default value 'false'
+[INFO ] 2023-02-10 17:17:17,172 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'disable-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:17:17,173 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'skip-default-plugins' to default value 'false'
+[INFO ] 2023-02-10 17:17:17,173 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Searching for plugins available in the classpath...
+[INFO ] 2023-02-10 17:17:17,215 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin direct
+[INFO ] 2023-02-10 17:17:17,216 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin notifications
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin expose-entity
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin literals-index
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin script
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin utils
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin plugincontrol
+[INFO ] 2023-02-10 17:17:17,217 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin magic-predicates
+[INFO ] 2023-02-10 17:17:17,218 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin sparql-template
+[INFO ] 2023-02-10 17:17:17,218 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'register-plugins' to default value '[]'
+[INFO ] 2023-02-10 17:17:17,221 [http-nio-7200-exec-4 | c.o.GraphDBConfigParameters] Reading external plugins from /opt/graphdb/dist/lib/plugins
+[INFO ] 2023-02-10 17:17:17,223 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'register-external-plugins' to default value '[/opt/graphdb/dist/lib/plugins]'
+[INFO ] 2023-02-10 17:17:17,223 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Registering external plugins...
+[INFO ] 2023-02-10 17:17:17,226 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/history-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,237 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin history
+[INFO ] 2023-02-10 17:17:17,238 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sequences-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,245 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin sequences
+[INFO ] 2023-02-10 17:17:17,245 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/similarity-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,270 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin similarity
+[INFO ] 2023-02-10 17:17:17,274 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/autocomplete-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,282 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin autocomplete
+[INFO ] 2023-02-10 17:17:17,282 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/entity-change-connector for plugins
+[INFO ] 2023-02-10 17:17:17,326 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin entity-change
+[INFO ] 2023-02-10 17:17:17,327 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geosparql-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,374 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin GeoSPARQL
+[INFO ] 2023-02-10 17:17:17,374 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/solr-connector for plugins
+[INFO ] 2023-02-10 17:17:17,416 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin solr-connector
+[INFO ] 2023-02-10 17:17:17,417 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/elasticsearch-connector for plugins
+[INFO ] 2023-02-10 17:17:17,483 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin elasticsearch-connector
+[INFO ] 2023-02-10 17:17:17,484 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/tx-rollback-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,487 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin tx-rollback
+[INFO ] 2023-02-10 17:17:17,487 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/sparql-mm for plugins
+[INFO ] 2023-02-10 17:17:17,490 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin sparql-mm
+[INFO ] 2023-02-10 17:17:17,490 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/notifications-logger-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,492 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin notifications-logger
+[INFO ] 2023-02-10 17:17:17,493 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/proof-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,497 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin proof
+[INFO ] 2023-02-10 17:17:17,498 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/dependencies-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,507 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin dependencies-plugin
+[INFO ] 2023-02-10 17:17:17,507 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/change-tracking-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,511 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin change-tracking
+[INFO ] 2023-02-10 17:17:17,515 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/rdfrank-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,522 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin rdfrank
+[INFO ] 2023-02-10 17:17:17,523 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/kafka-connector for plugins
+[INFO ] 2023-02-10 17:17:17,556 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin kafka-connector
+[INFO ] 2023-02-10 17:17:17,556 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/mongodb-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,564 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin mongodb
+[INFO ] 2023-02-10 17:17:17,564 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/text-mining-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,573 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin text-mining
+[INFO ] 2023-02-10 17:17:17,574 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/geospatial-plugin for plugins
+[INFO ] 2023-02-10 17:17:17,708 [http-nio-7200-exec-4 | c.o.t.p.g.FunctionLoader] Registered 1 functions from package com.ontotext.trree.plugin.geo.
+[INFO ] 2023-02-10 17:17:17,709 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin geospatial
+[INFO ] 2023-02-10 17:17:17,709 [http-nio-7200-exec-4 | c.o.t.OwlimSchemaRepository] Scanning /opt/graphdb/dist/lib/plugins/lucene-connector for plugins
+[INFO ] 2023-02-10 17:17:17,771 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Registering plugin lucene-connector
+[INFO ] 2023-02-10 17:17:17,773 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugins... (DEFAULT)
+[INFO ] 2023-02-10 17:17:17,787 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] License configuration: Embedded license
+[INFO ] 2023-02-10 17:17:17,788 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] License file: jar:file:/opt/graphdb/dist/lib/graphdb-runtime-10.0.0.jar!/GRAPHDB_LITE.license
+[INFO ] 2023-02-10 17:17:17,803 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Product:                 GRAPHDB_LITE
+[INFO ] 2023-02-10 17:17:17,804 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Usage restriction:       null
+[INFO ] 2023-02-10 17:17:17,804 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Licensee:                Freeware
+[INFO ] 2023-02-10 17:17:17,804 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[INFO ] 2023-02-10 17:17:17,804 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Version:                 10.0
+[INFO ] 2023-02-10 17:17:17,804 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Expiry date:             none
+[INFO ] 2023-02-10 17:17:17,805 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Latest publication date: none
+[INFO ] 2023-02-10 17:17:17,805 [http-nio-7200-exec-4 | c.o.l.LicenseRegistry] Max CPU cores:           1
+[INFO ] 2023-02-10 17:17:17,810 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'nonInterpretablePredicates' to default value 'null'
+[INFO ] 2023-02-10 17:17:17,828 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'GeoSPARQL'
+[INFO ] 2023-02-10 17:17:19,235 [http-nio-7200-exec-4 | c.o.t.g.FunctionLoader] Registered 50 functions from package com.useekm.geosparql.
+[INFO ] 2023-02-10 17:17:19,238 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'autocomplete'
+[INFO ] 2023-02-10 17:17:19,241 [http-nio-7200-exec-4 | c.o.t.p.a.AutocompletePluginUtils] >>>>>>>> AutocompletePlugin: No configuration file found at /opt/graphdb/home/data/repositories/interaction_context/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+[INFO ] 2023-02-10 17:17:19,252 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'change-tracking'
+[INFO ] 2023-02-10 17:17:19,280 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'dependencies-plugin'
+[INFO ] 2023-02-10 17:17:19,282 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'direct'
+[INFO ] 2023-02-10 17:17:19,285 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'elasticsearch-connector'
+[INFO ] 2023-02-10 17:17:19,307 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'entity-change'
+[INFO ] 2023-02-10 17:17:19,316 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'expose-entity'
+[INFO ] 2023-02-10 17:17:19,317 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'geospatial'
+[INFO ] 2023-02-10 17:17:19,318 [http-nio-7200-exec-4 | c.o.t.p.g.GeoSpatialPlugin] Plugin:geospatial initialized
+[INFO ] 2023-02-10 17:17:19,318 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'history'
+[INFO ] 2023-02-10 17:17:19,328 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'kafka-connector'
+[INFO ] 2023-02-10 17:17:19,338 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'literals-index'
+[INFO ] 2023-02-10 17:17:19,354 [http-nio-7200-exec-4 | c.o.p.literals-index] Literals indices restored.
+[INFO ] 2023-02-10 17:17:19,355 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'lucene-connector'
+[INFO ] 2023-02-10 17:17:19,365 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'magic-predicates'
+[INFO ] 2023-02-10 17:17:19,366 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#foreach
+[INFO ] 2023-02-10 17:17:19,367 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#length
+[INFO ] 2023-02-10 17:17:19,367 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#concat
+[INFO ] 2023-02-10 17:17:19,367 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#for
+[INFO ] 2023-02-10 17:17:19,367 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://spinrdf.org/spif#split
+[INFO ] 2023-02-10 17:17:19,367 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#member
+[INFO ] 2023-02-10 17:17:19,368 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering TupleFunction: http://jena.hpl.hp.com/ARQ/list#index
+[INFO ] 2023-02-10 17:17:19,368 [http-nio-7200-exec-4 | c.o.p.magic-predicates] Registering InverseMagicPredicate: http://jena.hpl.hp.com/ARQ/property#strSplit
+[INFO ] 2023-02-10 17:17:19,368 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'mongodb'
+[INFO ] 2023-02-10 17:17:19,369 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications'
+[INFO ] 2023-02-10 17:17:19,369 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'notifications-logger'
+[INFO ] 2023-02-10 17:17:19,370 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'plugincontrol'
+[INFO ] 2023-02-10 17:17:19,371 [http-nio-7200-exec-4 | c.o.t.p.p.PluginControlPlugin] Plugin:plugincontrol initialized
+[INFO ] 2023-02-10 17:17:19,371 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'proof'
+[INFO ] 2023-02-10 17:17:19,372 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'rdfrank'
+[INFO ] 2023-02-10 17:17:19,376 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'script'
+[INFO ] 2023-02-10 17:17:19,377 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'sequences'
+[INFO ] 2023-02-10 17:17:19,378 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'similarity'
+[INFO ] 2023-02-10 17:17:19,380 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'solr-connector'
+[INFO ] 2023-02-10 17:17:19,390 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-mm'
+[INFO ] 2023-02-10 17:17:19,415 [http-nio-7200-exec-4 | c.o.g.s.FunctionLoader] Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+[INFO ] 2023-02-10 17:17:19,416 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'sparql-template'
+[INFO ] 2023-02-10 17:17:19,417 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'text-mining'
+[INFO ] 2023-02-10 17:17:19,418 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'tx-rollback'
+[INFO ] 2023-02-10 17:17:19,419 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Initializing plugin 'utils'
+[INFO ] 2023-02-10 17:17:19,896 [http-nio-7200-exec-4 | c.o.t.s.i.PluginManager] Finished initializing plugins
+[INFO ] 2023-02-10 17:17:19,898 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.page.cache.size' to default value '512.0M'
+[INFO ] 2023-02-10 17:17:19,974 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'do.resolve.entities' to default value 'true'
+[INFO ] 2023-02-10 17:17:19,975 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'do.load.data' to default value 'true'
+[INFO ] 2023-02-10 17:17:19,975 [http-nio-7200-exec-4 | c.o.r.p.ParallelLoader] Data will be parsed + resolved + loaded.
+[INFO ] 2023-02-10 17:17:19,976 [http-nio-7200-exec-4 | c.o.c.AbstractParameter] Configured parameter 'graphdb.persistent.parallel.inferencers' to default value 'false'
+[INFO ] 2023-02-10 17:17:20,012 [http-nio-7200-exec-4 | c.o.r.p.ParallelLoader] Using 1 threads for inference
+[INFO ] 2023-02-10 17:18:46,458 [Thread-3 | c.o.g.s.GraphDB] Stopping GraphDB.
+[INFO ] 2023-02-10 17:18:46,632 [Thread-3 | c.o.f.c.s.SemanticDataManagement] Shutting down current semantic location
