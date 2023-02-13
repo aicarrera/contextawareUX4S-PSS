@@ -1,15 +1,15 @@
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\API\CORSFilter.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\DataAcess\UserDatabase.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\InteractionSequence.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\DataAcess\Parametrization.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\Service.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\User.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\API\Headers.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\DataAcess\RDFDAL.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\RequestNextItem.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\ContextInteraction.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\Subservice.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\DataAcess\RDFRepositoryManager.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\Interaction.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\API\Configuration.java
-C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\APIContextInteraction\src\main\java\mgep\Entities\GenericResponse.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\API\CORSFilter.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\ContextInteraction.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\Interaction.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\Subservice.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\API\Configuration.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\Service.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\DataAcess\Parametrization.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\DataAcess\RDFDAL.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\DataAcess\UserDatabase.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\User.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\DataAcess\RDFRepositoryManager.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\API\Headers.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\GenericResponse.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\RequestNextItem.java
+C:\Users\aicarrera.MLAN11214P447\Documents\NetBeansProjects\Context-aware UX for S-PSS Project\APIContextInteraction\APIContextInteraction_Java\src\main\java\mgep\Entities\InteractionSequence.java

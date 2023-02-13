@@ -1,11 +1,15 @@
 version: '3'
 services:
-  web_api:
+ web_api:
+    container_name: ontologyAPI
     build: ./APIContextInteraction/APIContextInteraction_Java
     ports:
       - "8080:8080"
-  database:
-    image: ontotext/graphdb:10.0.0
+    network_mode: "host"
+ database:
+    container_name: graphdb
+    image: ontotext/graphdb:10.0.0    
+
     environment:
       GRAPHDB_JAVA_OPTIONS: -Xmx1g
     ports:
@@ -13,13 +17,25 @@ services:
     volumes:
       # Change folders in the .env file or directly here  
       - ${GRAPHDB_HOME}:/opt/graphdb/home    
-      - ${REPOSITORY_CONFIG_FILE}:/opt/graphdb/graphdb-repo-config.ttl  
-  backend:
-    build: ${APPLICATION_FOLDER}/server-backenddrivenUI
+      - ${REPOSITORY_CONFIG_FILE}:/opt/graphdb/graphdb-repo-config.ttl
+      - ${IMPORT_FOLDER}:/opt/graphdb/home/graphdb-import  
+    network_mode: "host"
+ backend:
+    container_name: graphql
+    build: 
+      context: ${APPLICATION_FOLDER}/server-backenddrivenUI
     ports:
       - "4000:4000"
-  frontend:
-    build: ${APPLICATION_FOLDER}/web-backenddrivenui
+    network_mode: "host"
+ frontend:
+    container_name: cofeemachine
+    build: 
+       context: ${APPLICATION_FOLDER}/web-backenddrivenui
     ports:
       - "3000:3000"
+    network_mode: "host"
 
+
+
+ 
+>>>>>>> 9f4349be02b2975faa06e3c0dfa318d34595284e
