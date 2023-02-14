@@ -55,11 +55,8 @@ public class Headers {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUser(@QueryParam("username") String username) {
         System.out.println("getUser");
-        Map<String,User> users= new HashMap<>();//UserDatabase.readUsersFromCSV("users_db.csv");     
-        users.put("dreguera", new User("FmxgvxmU","dreguera","doctoral student"));
-        users.put("xvalencia", new User("P5BAwzTfB","xvalencia","doctoral student"));
-
-     	return Response.ok(users.get(username)).header("Access-Control-Allow-Origin", "*").build();
+        Map<String,User> users= UserDatabase.readUsersFromCSV("users_db.csv");    
+     	return Response.ok(users.get(username)).build();
     }                 
     
     

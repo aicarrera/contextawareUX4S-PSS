@@ -27,6 +27,9 @@ public class GenericResponse implements Serializable{
     public GenericResponse(boolean valueBoolean) {
         this.valueBoolean = valueBoolean;
     }
+
+    public GenericResponse() {
+    }
     
     
     
