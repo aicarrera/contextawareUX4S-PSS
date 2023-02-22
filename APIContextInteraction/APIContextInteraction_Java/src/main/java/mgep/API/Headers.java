@@ -57,7 +57,14 @@ public class Headers {
         System.out.println("getUser");
         Map<String,User> users= UserDatabase.readUsersFromCSV("users_db.csv");    
      	return Response.ok(users.get(username)).build();
-    }                 
+    }     
+    @POST
+    @Path("/register")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response  registerUser(User u) {
+        System.out.println("register");     
+     	return Response.ok(UserDatabase.recordNewUserCSV(u,"users_db.csv")).build();
+    }      
     
     
     /****
