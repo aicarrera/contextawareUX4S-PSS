@@ -35,7 +35,7 @@ import org.apache.commons.csv.CSVRecord;
 
 public class UserDatabase {
 
-   public static boolean recordNewUserCSV(User u, String fileName) throws InterruptedException {
+   public static boolean recordNewUserCSV(User u, String fileName)  {
     URL res = UserDatabase.class.getClassLoader().getResource(fileName);
     try ( 
          BufferedWriter writer = Files.newBufferedWriter(Paths.get(res.toURI()), StandardOpenOption.APPEND) ;
@@ -46,8 +46,10 @@ public class UserDatabase {
     } catch (IOException e) {
         e.printStackTrace();
         return false;
-    }  catch (URISyntaxException ex) {
+    }  catch (URISyntaxException | InterruptedException ex) {
+        
            Logger.getLogger(UserDatabase.class.getName()).log(Level.SEVERE, null, ex);
+           return false;
        }
     
     return true;
