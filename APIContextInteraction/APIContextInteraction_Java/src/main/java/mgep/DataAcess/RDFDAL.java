@@ -5,6 +5,7 @@
  */
 package mgep.DataAcess;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +32,7 @@ public class RDFDAL {
     	static Logger log = LogManager.getLogger(RDFDAL.class.getName());
 	static String header= "PREFIX rdf: <" + Parametrization.RDF_IRI + ">\r\n"
 			    + "PREFIX : <" + Parametrization.DEVICE_SERVICE_ONT_IRI + ">\r\n"
-                            +"PREFIX ofn: <http://www.ontotext.com/sparql/functions/> \r\n";
+                            +"PREFIX math: <http://www.ontotext.com/sparql/functions/> \r\n";
         
         
         private Subservice mapSubservice(BindingSet modelObj){
@@ -291,6 +292,134 @@ public class RDFDAL {
                     System.out.println("QUERY:  "+query);
                     return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
         }
+        
+       
+        
+        
+        public List<Subservice> getSubserviceRecommendationGeneral(int k, String user, boolean turnOn){  
+            if (turnOn){
+                if (hasInteractions(user)){
+                   return  getSubserviceRecommendationCosineDistance( k,  user);
+                }
+                else{
+                    return getSubserviceContextWeighted(k);
+                } 
+            }
+            else{
+                return getSubserviceRandom(k);
+            }
+        }
+        
+        
+        
+        
+        /**
+         * 
+         * @param user
+         * @return 
+         */  
+        public boolean hasInteractions(String user){
+            log.info("Has interactions?");
+            RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);                       
+            String query= String.format( header 
+                           +"SELECT ?s \r\n"
+                           +"WHERE {?r :is_from_a ?u ; \r\n"
+                           +":is_for_a ?s. \r\n"
+                           +"?u :name \"%s\".} \r\n"
+                           +"LIMIT 1 \r\n" , user);
+            try{
+                List<BindingSet> bindingSet = repManager.makeSPARQLquery(Parametrization.REPOSITORY_ID, query);
+                if(bindingSet.isEmpty()) return false;
+            }
+            catch (Exception e) {
+			log.catching(e);
+                        System.err.println("Exception hasInteractions" );
+			System.out.println(e.getMessage());
+	     }
+            return true;
+        }  
+        
+        
+        /**
+         * Get subservice recommendation based on context, weighted average. Only when it´s new user. 
+         * @param k number of recommendations
+         * @param user user for recommendation
+         * @return 
+         */
+        public List<Subservice> getSubserviceRandom(int k){
+            log.info("Enter getSubserviceContextWeighted");
+            RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+          
+            
+            String query =  String.format(header            
+                            +"SELECT ?idSubservice ?name where { \r\n"
+                            +"?s a :Service.\r\n"
+                            +"?s :id ?idSubservice;\r\n"
+                            +":name ?name. \r\n"
+                            +"}  \r\n");
+                System.out.println(query);
+                List<Subservice> subserviceObj = new ArrayList<>();                
+                try {
+			List<BindingSet> bindingSet = repManager.makeSPARQLquery(Parametrization.REPOSITORY_ID, query);
+			if(bindingSet.isEmpty()) return null;
+                        Collections.shuffle(bindingSet);                        
+                        bindingSet.subList(0, k);
+                        bindingSet.forEach(b -> {
+                            subserviceObj.add(mapSubservice(b));
+                         });							
+		} catch (Exception e) {
+			log.catching(e);
+                        System.err.println("Exception getSubserviceContextWeighted" );
+			System.out.println(e.getMessage());
+		}
+		
+                
+                
+            return subserviceObj;
+        }
+        
+        
+         /**
+         * Get subservice recommendation based on context, weighted average. Only when it´s new user. 
+         * @param k number of recommendations
+         * @param user user for recommendation
+         * @return 
+         */
+        public List<Subservice> getSubserviceContextWeighted(int k){
+            log.info("Enter getSubserviceContextWeighted");
+            RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+          
+            
+            String query =  String.format(header            
+                    +"SELECT ?name ?idSubservice (sum(?value1)/ count(?s) as ?score)\r\n"
+                    +"WHERE { \r\n"
+                    +"     ?s a :Subservice.\r\n"
+                    +"     ?r1 :valueRating ?value1 .\r\n"
+                    +"     ?r1 :is_for_a ?s .\r\n"
+                    +"     ?s :id ?idSubservice;\r\n"
+                    +"        :name ?name.}  \r\n"
+                    +"GROUP BY  ?name ?idSubservice\r\n"
+                    +"ORDER BY desc(?score)\r\n"
+                    +"LIMIT %s  \r\n",  k);
+                System.out.println(query);
+                List<Subservice> subserviceObj = new ArrayList<>();                
+                try {
+			List<BindingSet> bindingSet = repManager.makeSPARQLquery(Parametrization.REPOSITORY_ID, query);
+			if(bindingSet.isEmpty()) return null;
+                        bindingSet.forEach(b -> {
+                            subserviceObj.add(mapSubservice(b));
+                         });							
+		} catch (Exception e) {
+			log.catching(e);
+                        System.err.println("Exception getSubserviceContextWeighted" );
+			System.out.println(e.getMessage());
+		}
+		
+                
+                
+            return subserviceObj;
+        }
+        
         
         /**
          * Get subservice recommendation based on cosine distance

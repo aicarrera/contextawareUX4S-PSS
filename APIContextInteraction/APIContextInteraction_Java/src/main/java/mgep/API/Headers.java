@@ -136,6 +136,16 @@ public class Headers {
     	return Response.ok(new RDFDAL().getSubserviceRecommendationCosineDistance(topk,userid)).build();
     }
     
+    @GET
+    @Path("/getServiceRecommendations")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getRecommendationService(@QueryParam("userid") String userid, @QueryParam("on") boolean on ,@QueryParam("topk") int topk, @HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER) {
+        System.out.println("getServiceRecommendations");
+        setServerGraphdb(GRAPHDB_SERVER);      
+    	return Response.ok(new RDFDAL().getSubserviceRecommendationGeneral(topk,userid, on)).build();
+    }
+    
+    
     @POST
     @Path("/predictNextStepBasedonContext")
     @Consumes(MediaType.APPLICATION_JSON)    
