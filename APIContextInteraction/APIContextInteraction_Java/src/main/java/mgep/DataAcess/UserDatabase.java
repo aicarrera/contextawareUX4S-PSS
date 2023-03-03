@@ -9,8 +9,10 @@ package mgep.DataAcess;
  *
  * @author aicarrera
  */
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -62,7 +64,7 @@ public class UserDatabase {
        InputStream s= UserDatabase.class.getClassLoader().getResourceAsStream(fileName);
        
         try (InputStreamReader fileReader = new InputStreamReader( s );
-
+            // BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
              CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
             for (CSVRecord record : csvParser) {
                 String username = record.get("username");
@@ -71,7 +73,11 @@ public class UserDatabase {
                 User user = new User(userid, username, role);
                 users.put(username,user);
             }
-        } catch (IOException e) {
+        }
+        catch(FileNotFoundException e){
+            System.err.println("File not found!");
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         return users;
