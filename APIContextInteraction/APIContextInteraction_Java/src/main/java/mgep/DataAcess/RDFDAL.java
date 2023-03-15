@@ -135,6 +135,7 @@ public class RDFDAL {
                    query+= String.format( header +
                     "    INSERT {\n" +
                     "    ?iri rdf:type :InteractionSequence .   \n" +
+                    "    ?iri :valueInteraction %s .     \n" +
                     "    ?iri :startDate %s .     \n" +
                     "    ?iri :endDate %s .    \n" +
                     "    ?iri :id %s .    \n" +                    
@@ -148,7 +149,7 @@ public class RDFDAL {
                     "    BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#subservice\",STR(%s))) as ?iri_subservice)\n" +
                     "    BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#user\",STR(%s))) as ?iri_user)\n" +
                     "%s" +
-                    "}; \n" , i.getStartDate(),i.getEndDate(),i.getId(),occursSTR,i.getId(),i.getIdSubservice(),i.getIdUser(),bindSTR);
+                    "}; \n" , i.getValue(), i.getStartDate(),i.getEndDate(),i.getId(),occursSTR,i.getId(),i.getIdSubservice(),i.getIdUser(),bindSTR);
             }
               
             return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
@@ -270,9 +271,10 @@ public class RDFDAL {
                     +"} \r\n"
                     +"where \r\n"
                     +"{     \r\n"
-                    +"select ?u1  (count(?s)/?q as ?rate1) ?s  ?iri where { \r\n"
+                    +"select ?u1  (count(?valueInteraction)/?q as ?rate1) ?s  ?iri where { \r\n"
                     +"	?u1 :makes ?i1 . \r\n"
                     +"    ?i1 :executes ?s. \r\n"
+                    +"    ?i1 :valueInteraction ?valueInteraction.\r\n"
                     +"    ?i1 :occurs_in ?c . \r\n"
                     +"    ?c :value  ?contextvalue. \r\n"
                     +"    ?s :id ?id2 . \r\n"

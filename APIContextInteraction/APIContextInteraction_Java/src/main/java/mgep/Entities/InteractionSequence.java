@@ -23,6 +23,7 @@ public class InteractionSequence implements Serializable {
     private ArrayList<ContextInteraction> contexts;
     private ArrayList<Interaction> interactions;
     private String  idContexttmp;
+    private int value;
     
     public String getIdSubservice() {
         return idSubservice;
@@ -45,7 +46,7 @@ public class InteractionSequence implements Serializable {
     public InteractionSequence() {
     }
 
-    public InteractionSequence(long startDate, long endDate, String id, String idSubservice, String idUser, ArrayList<ContextInteraction> contexts) {
+    public InteractionSequence(long startDate, long endDate, String id, String idSubservice, String idUser, ArrayList<ContextInteraction> contexts, int value) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.id = id;
@@ -53,6 +54,7 @@ public class InteractionSequence implements Serializable {
         this.idUser = idUser;
         this.contexts = contexts;
         interactions=new ArrayList<>();
+        this.value=value;
         
     }
 
@@ -136,7 +138,14 @@ public class InteractionSequence implements Serializable {
     public void setId(String id) {
         this.id = id;
     }
+    public int getValue() {
+        return value;
+    }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -161,5 +170,6 @@ public class InteractionSequence implements Serializable {
         }
         return true;
     }
-    
+
+
 }
