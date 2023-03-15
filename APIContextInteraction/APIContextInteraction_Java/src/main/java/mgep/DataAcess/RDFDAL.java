@@ -284,7 +284,7 @@ public class RDFDAL {
                     +"   { SELECT ?subu (count(?i) as ?q ) where \r\n"
                     + "  {?subu a :User. \r\n"
                     + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
-                    + "   filter((%s)&& ?valueInteractionInt>0))} GROUP BY ?subu  } \r\n"
+                    + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
                     +"    \r\n"
                     +"    FILTER (?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
