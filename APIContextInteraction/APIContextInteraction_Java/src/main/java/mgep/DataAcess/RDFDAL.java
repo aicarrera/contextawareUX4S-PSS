@@ -468,6 +468,7 @@ public class RDFDAL {
                 +"	   BIND (math:sqrt(?v1pow2) AS ?sqrtV1).\r\n"
                 +"	} \r\n"
                 +"    #LIMIT NEIGHBORHOOD  \r\n"  
+                +"      ORDER BY desc(?similarity) \r\n"  
                 +"	LIMIT 10} \r\n"
                 +"	FILTER(?user=?u2) \r\n"
                 +"} \r\n"
