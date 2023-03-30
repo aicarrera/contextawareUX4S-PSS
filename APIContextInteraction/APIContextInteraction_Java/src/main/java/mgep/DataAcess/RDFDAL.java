@@ -435,7 +435,7 @@ public class RDFDAL {
           
             
             String query =  String.format(header            
-                +"SELECT  ?idSubservice ?name (sum(?valueR*?similarity)/ sum(?similarity) as ?score) \r\n"
+                +"SELECT  ?idSubservice ?name (sum(?valueR*?similarity)/ (sum(?similarity)+0.00000001) as ?score) \r\n"
                 +"WHERE{\r\n"
                 +"?user :uses ?subservice.\r\n" 
                 +"?r :is_from_a ?user; \r\n"
