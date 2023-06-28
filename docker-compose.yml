@@ -21,6 +21,7 @@ services:
       - ${IMPORT_FOLDER}:/opt/graphdb/home/graphdb-import  
     network_mode: "host"
  database_user:
+    container_name: postgresdb
     image: postgres
     restart: always
     environment:
