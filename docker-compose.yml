@@ -20,6 +20,18 @@ services:
       - ${REPOSITORY_CONFIG_FILE}:/opt/graphdb/graphdb-repo-config.ttl
       - ${IMPORT_FOLDER}:/opt/graphdb/home/graphdb-import  
     network_mode: "host"
+ database_user:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: interactions
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    network_mode: "host"
  backend:
     container_name: graphql
     build: 
