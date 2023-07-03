@@ -46,4 +46,10 @@ services:
        context: ${APPLICATION_FOLDER}/web-backenddrivenui
     ports:
       - "80:3000"
- 
+ nginx:
+    container_name: nginx
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
