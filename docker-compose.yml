@@ -38,8 +38,7 @@ services:
     build: 
       context: ${APPLICATION_FOLDER}/server-backenddrivenUI
     ports:
-      - "4000:4000"
-    network_mode: "host"
+      - "4000:4000"  
  frontend:
     container_name: cofeemachine
     build: 
