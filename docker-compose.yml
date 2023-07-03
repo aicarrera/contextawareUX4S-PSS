@@ -46,5 +46,4 @@ services:
        context: ${APPLICATION_FOLDER}/web-backenddrivenui
     ports:
       - "80:3000"
-    network_mode: "host"
  
