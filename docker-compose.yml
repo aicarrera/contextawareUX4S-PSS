@@ -38,12 +38,6 @@ services:
       context: ${APPLICATION_FOLDER}/server-backenddrivenUI
     ports:
       - "4000:4000"  
- frontend:
-    container_name: cofeemachine
-    build: 
-       context: ${APPLICATION_FOLDER}/web-backenddrivenui
-    ports:
-      - "3000:3000"
  nginx:
     container_name: nginx
     image: nginx
