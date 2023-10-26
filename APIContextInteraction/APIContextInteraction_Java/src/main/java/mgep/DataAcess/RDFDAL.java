@@ -609,7 +609,7 @@ public class RDFDAL {
                     "    ?iri rdf:type :Service .   \n" +
                     "    ?iri :name \"%s\" .     \n" +
                     "    ?iri :id  %s .    \n" +                    
-                    "    ?iri :location  %s ." +       
+                    "    ?iri :location  \"%s\" ." +       
                     "}\n" +
                     "WHERE{\n" +
                     "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#service\",STR(%s))) as ?iri)\n" +                             
