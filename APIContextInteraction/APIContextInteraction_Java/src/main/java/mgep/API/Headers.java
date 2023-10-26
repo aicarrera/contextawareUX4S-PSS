@@ -20,6 +20,7 @@ import mgep.Entities.User;
 import mgep.Entities.ContextInteraction;
 import mgep.Entities.Interaction;
 import mgep.Entities.RequestNextItem;
+import mgep.Entities.Service;
 import mgep.Entities.Subservice;
 
 import org.apache.logging.log4j.*;
@@ -201,6 +202,16 @@ public class Headers {
          setServerGraphdb(GRAPHDB_SERVER);
         return Response.ok(new RDFDAL().insertSubservice(is)).build();
     }
+    
+       
+    @POST
+    @Path("/insertBatchService")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response insertBatchService(ArrayList<Service> is,@HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER) {
+         setServerGraphdb(GRAPHDB_SERVER);
+        return Response.ok(new RDFDAL().insertService(is)).build();
+    }
+    
     
     @POST
     @Path("/insertBatchContext")

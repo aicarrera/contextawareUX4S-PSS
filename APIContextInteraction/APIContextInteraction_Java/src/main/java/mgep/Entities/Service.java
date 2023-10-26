@@ -6,6 +6,7 @@
 package mgep.Entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,8 +16,17 @@ public class Service implements Serializable{
     private static final long serialVersionUID = 1L;
     private String id;
     private String name;
-
+    private String location;
+    private ArrayList<Subservice> services;
+    
     public Service() {
+    }
+
+    public Service(String id, String name, String location, ArrayList<Subservice> services) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.services = services;
     }
 
     public String getId() {
@@ -33,6 +43,22 @@ public class Service implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public ArrayList<Subservice> getServices() {
+        return services;
+    }
+
+    public void setServices(ArrayList<Subservice> services) {
+        this.services = services;
     }
    
 }

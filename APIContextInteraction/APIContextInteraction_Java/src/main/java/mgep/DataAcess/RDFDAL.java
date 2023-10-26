@@ -16,6 +16,7 @@ import mgep.Entities.ContextInteraction;
 import mgep.Entities.GenericResponse;
 import mgep.Entities.Interaction;
 import mgep.Entities.InteractionSequence;
+import mgep.Entities.Service;
 import mgep.Entities.Subservice;
 import mgep.Entities.User;
 
@@ -570,7 +571,57 @@ public class RDFDAL {
                    return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
                    
         }
-
+             /***
+         * Insert subservices
+         * @param list
+         * @param idService
+         * @return 
+         */
+        public boolean insertSubservice(ArrayList<Subservice> list, String idService){
+            log.info("Enter GetServiceByAasId");     
+	    RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+            String query="";
+            for(Subservice i: list){
+                   query+= String.format( header +
+                          "INSERT {\n" +
+                    "    ?iri rdf:type :Subservice .   \n" +
+                    "    ?iri :name \"%s\" .     \n" +
+                    "    ?iri :id  %s .    \n" +                    
+                    "   ?iri :is_subservice_of ?iri_service"+
+                    "}\n" +
+                    "WHERE{\n" +
+                    "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#subservice\",STR(%s))) as ?iri)\n" +
+                    "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#service\",STR(%s))) as ?iri_service)"+              
+                    "}; \n", i.getName(),i.getId(),i.getId(),idService);
+                  //  log.debug("QUERY:  "+query);
+                    
+            }
+                   return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
+                   
+        }
+        public boolean insertService(ArrayList<Service> list){
+            log.info("Enter insertService");     
+	    RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+            String query="";
+            for(Service i: list){
+                   query+= String.format( header +
+                          "INSERT {\n" +
+                    "    ?iri rdf:type :Service .   \n" +
+                    "    ?iri :name \"%s\" .     \n" +
+                    "    ?iri :id  %s .    \n" +                    
+                    "    ?iri :location  %s .    \n" +       
+                    "}\n" +
+                    "WHERE{\n" +
+                    "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#service\",STR(%s))) as ?iri)\n" +                             
+                    "}; \n", i.getName(),i.getId(),i.getLocation(),i.getId());
+                  //  log.debug("QUERY:  "+query);
+                  
+                  insertSubservice(i.getServices(), i.getId());
+            }
+                   return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
+                   
+        }
+        
         
          /***
          * Insert Context
