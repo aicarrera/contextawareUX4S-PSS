@@ -593,7 +593,7 @@ public class RDFDAL {
                     "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#subservice\",STR(%s))) as ?iri)\n" +
                     "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#service\",STR(%s))) as ?iri_service)"+              
                     "}; \n", i.getName(),i.getId(),i.getId(),idService);
-                  //  log.debug("QUERY:  "+query);
+             
                     
             }
                    return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
@@ -609,12 +609,12 @@ public class RDFDAL {
                     "    ?iri rdf:type :Service .   \n" +
                     "    ?iri :name \"%s\" .     \n" +
                     "    ?iri :id  %s .    \n" +                    
-                    "    ?iri :location  %s .    \n" +       
+                    "    ?iri :location  %s ." +       
                     "}\n" +
                     "WHERE{\n" +
                     "   BIND( IRI(CONCAT(\"http://ontologies/interactioncontext#service\",STR(%s))) as ?iri)\n" +                             
                     "}; \n", i.getName(),i.getId(),i.getLocation(),i.getId());
-                  //  log.debug("QUERY:  "+query);
+                    System.out.println(query);
                   
                   insertSubservice(i.getServices(), i.getId());
             }
