@@ -296,7 +296,66 @@ public class RDFDAL {
                     return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
         }
         
-       
+           /**
+         * Calculate Ratings
+         * @param contextList 
+         * @param isExclusive 
+         * @param id_service 
+         * @param location 
+         * @return  
+         */        
+        public boolean calculateRatings(ArrayList<ContextInteraction> contextList, boolean isExclusive, int id_service, String location){
+            log.info("Enter calculateRatings");     
+            
+         
+            String allContextValues= getContextfilterString(contextList,isExclusive);
+            System.out.println(contextList);
+	    RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);                       
+            String query= String.format( header +
+                    "DELETE WHERE { ?r rdf:type :Rating; \r\n"
+                    +"               ?property      ?value }; \r\n"
+                    +"INSERT { \r\n"
+                    +"    ?iri rdf:type :Rating . \r\n"
+                    +"    ?iri :valueRating ?rate1 .  \r\n"
+                    +"    ?iri :is_from_a ?u1 .  \r\n"
+                    +"    ?iri :is_for_a ?s .  \r\n"
+                    +"} \r\n"
+                    +"where \r\n"
+                    +"{     \r\n"
+                    +"select ?u1  (sum(?valueInteraction)/?q as ?rate1) ?s  ?iri where { \r\n"
+                    +"	?u1 :makes ?i1 . \r\n"
+                    +"    ?i1 :executes ?s. \r\n"
+                    +"    ?s :is_subservice_of ?service. \r\n"
+                    +"    ?service :id ?id_service. \r\n"
+                    +"    ?i1 :valueInteraction ?valueInteraction.\r\n"
+                    +"    ?i1 :occurs_in ?c . \r\n"
+                    +"    ?c :value  ?contextvalue. \r\n"
+                    +"    ?s :id ?id2 . \r\n"
+                    +"    ?u1 :id ?id1 . \r\n"
+                    +"    ?u1 :name ?n1.  \r\n"
+                    +"   BIND(IRI(CONCAT(\"http://ontologies/interactioncontext#rating_\",CONCAT(STR(?id1),'_',STR(?id2))))as ?iri) \r\n"
+                    +"   { SELECT ?subu (count(?i) as ?q ) where \r\n"
+                    + "  {?subu a :User. \r\n"
+                    + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
+                    + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
+                    +"    \r\n"
+                    +"    FILTER (?id_service = %s && ?u1 = ?subu && (%s)) \r\n"
+                    +"} \r\n"    
+                    +"GROUP BY ?u1 ?s ?q  ?iri \r\n"
+                    +"ORDER BY ?u1 ?s \r\n"
+                    +"}; \r\n", allContextValues,id_service,allContextValues);
+                    System.out.println("QUERY:  "+query);
+                    return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
+        }
+        
+        
+       /**
+        * 
+        * @param k
+        * @param user
+        * @param turnOn
+        * @return 
+        */
         
         
         public List<Subservice> getSubserviceRecommendationGeneral(int k, String user, boolean turnOn){  

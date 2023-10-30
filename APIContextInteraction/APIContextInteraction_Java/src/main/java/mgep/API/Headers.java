@@ -163,6 +163,14 @@ public class Headers {
          return Response.ok(new RDFDAL().calculateRatings(contextList, isExclusive)).build();
     }
     
+    @POST
+    @Path("/calculateRatingsParameters")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response calculateRatings(ArrayList<ContextInteraction> contextList,@HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER, @QueryParam("isExclusive") boolean isExclusive ,@QueryParam("idService") int idService, @QueryParam("location") String location ){
+         setServerGraphdb(GRAPHDB_SERVER);
+         return Response.ok(new RDFDAL().calculateRatings(contextList, isExclusive, idService, location)).build();
+    }
+    
     
     /************************************************************ 
      * INSERTS AND MIGRATIONS HEADERS
