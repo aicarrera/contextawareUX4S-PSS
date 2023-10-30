@@ -19,7 +19,7 @@ public class CORSFilter implements ContainerResponseFilter {
    public void filter(final ContainerRequestContext requestContext,
                       final ContainerResponseContext cres) throws IOException {
      String origin = requestContext.getHeaderString("origin");
-     //System.out.println("Origin: "+origin);
+     System.out.println("Origin: "+origin);
       if ((origin != null) && (!origin.isEmpty())) {
           cres.getHeaders().add("Access-Control-Allow-Origin", origin);
       }
