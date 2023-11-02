@@ -339,7 +339,7 @@ public class RDFDAL {
                     + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
                     + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
                     +"    \r\n"
-                    +"    FILTER (?location = %s && ?u1 = ?subu && (%s)) \r\n"
+                    +"    FILTER (?location = \"%s\" && ?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
                     +"GROUP BY ?u1 ?s ?q  ?iri \r\n"
                     +"ORDER BY ?u1 ?s \r\n"
