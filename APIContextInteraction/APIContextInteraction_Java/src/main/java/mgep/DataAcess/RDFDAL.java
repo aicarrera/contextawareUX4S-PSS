@@ -326,7 +326,7 @@ public class RDFDAL {
                     +"	?u1 :makes ?i1 . \r\n"
                     +"    ?i1 :executes ?s. \r\n"
                     +"    ?s :is_subservice_of ?service. \r\n"
-                    +"    ?service :id ?id_service. \r\n"
+                    +"    ?service :location ?location. \r\n"
                     +"    ?i1 :valueInteraction ?valueInteraction.\r\n"
                     +"    ?i1 :occurs_in ?c . \r\n"
                     +"    ?c :value  ?contextvalue. \r\n"
@@ -339,11 +339,11 @@ public class RDFDAL {
                     + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
                     + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
                     +"    \r\n"
-                    +"    FILTER (?id_service = %s && ?u1 = ?subu && (%s)) \r\n"
+                    +"    FILTER (?location = %s && ?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
                     +"GROUP BY ?u1 ?s ?q  ?iri \r\n"
                     +"ORDER BY ?u1 ?s \r\n"
-                    +"}; \r\n", allContextValues,id_service,allContextValues);
+                    +"}; \r\n", allContextValues,location,allContextValues);
                     System.out.println("QUERY:  "+query);
                     return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
         }
