@@ -147,7 +147,7 @@ public class Headers {
     }
     
     @GET
-    @Path("/getServiceRecommendations")
+    @Path("/getSubServiceRecommendations")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getRecommendationSubService(@QueryParam("userid") String userid, @QueryParam("on") boolean on ,@QueryParam("topk") int topk, @QueryParam("service") String service, @QueryParam("parameter") String parameter, @HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER) {
         System.out.println("getRecommendationSubService");
