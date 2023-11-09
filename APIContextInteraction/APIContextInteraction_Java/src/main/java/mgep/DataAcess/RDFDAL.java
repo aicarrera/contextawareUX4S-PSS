@@ -312,9 +312,7 @@ public class RDFDAL {
             System.out.println(contextList);
 	    RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);                       
             String query= String.format( header +
-                    "DELETE WHERE { ?r rdf:type :Rating; \r\n"
-                    +"               ?property      ?value }; \r\n"
-                    +"INSERT { \r\n"
+                    "INSERT { \r\n"
                     +"    ?iri rdf:type :Rating . \r\n"
                     +"    ?iri :valueRating ?rate1 .  \r\n"
                     +"    ?iri :is_from_a ?u1 .  \r\n"
