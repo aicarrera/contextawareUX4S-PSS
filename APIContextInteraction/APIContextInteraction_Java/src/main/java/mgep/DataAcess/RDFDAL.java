@@ -300,11 +300,11 @@ public class RDFDAL {
          * Calculate Ratings
          * @param contextList 
          * @param isExclusive 
-         * @param id_service 
+         * @param service 
          * @param location 
          * @return  
          */        
-        public boolean calculateRatings(ArrayList<ContextInteraction> contextList, boolean isExclusive, int id_service, String location){
+        public boolean calculateRatings(ArrayList<ContextInteraction> contextList, boolean isExclusive, String service, String location){
             log.info("Enter calculateRatings");     
             
          
@@ -319,14 +319,16 @@ public class RDFDAL {
                     +"    ?iri :valueRating ?rate1 .  \r\n"
                     +"    ?iri :is_from_a ?u1 .  \r\n"
                     +"    ?iri :is_for_a ?s .  \r\n"
+                    +"    ?iri :of_service ?service .  \r\n"                            
                     +"} \r\n"
                     +"where \r\n"
                     +"{     \r\n"
                     +"select ?u1  (sum(?valueInteraction)/?q as ?rate1) ?s  ?iri where { \r\n"
-                    +"	?u1 :makes ?i1 . \r\n"
+                    +"	  ?u1 :makes ?i1 . \r\n"
                     +"    ?i1 :executes ?s. \r\n"
                     +"    ?s :is_subservice_of ?service. \r\n"
                     +"    ?service :location ?location. \r\n"
+                    +"    ?service :name \"%s\". \r\n"         
                     +"    ?i1 :valueInteraction ?valueInteraction.\r\n"
                     +"    ?i1 :occurs_in ?c . \r\n"
                     +"    ?c :value  ?contextvalue. \r\n"
@@ -339,25 +341,22 @@ public class RDFDAL {
                     + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
                     + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
                     +"    \r\n"
-                    +"    FILTER (?location = \"%s\" && ?u1 = ?subu && (%s)) \r\n"
+                    +"    FILTER (?location = \"%s\" &&  ?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
                     +"GROUP BY ?u1 ?s ?q  ?iri \r\n"
                     +"ORDER BY ?u1 ?s \r\n"
-                    +"}; \r\n", allContextValues,location,allContextValues);
+                    +"}; \r\n", service,allContextValues,location,allContextValues);
                     System.out.println("QUERY:  "+query);
                     return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
         }
         
         
-       /**
-        * 
+       /**   
         * @param k
         * @param user
         * @param turnOn
         * @return 
-        */
-        
-        
+        */               
         public List<Subservice> getSubserviceRecommendationGeneral(int k, String user, boolean turnOn){  
             if (turnOn){
                 if (hasInteractions(user)){
@@ -371,7 +370,27 @@ public class RDFDAL {
                 return getSubserviceRandom(k);
             }
         }
-        
+       
+        /**   
+        * @param k
+        * @param user
+        * @param turnOn
+        * @return 
+        */               
+        public List<Subservice> getSubserviceRecommendationGeneral(int k, String user, boolean turnOn, String service, String parameter){  
+            if (turnOn){
+                if (hasInteractions(user)){
+                   return  getSubserviceRecommendationCosineDistance( k,  user, service);
+                }
+                else{
+                    return getSubserviceContextWeighted(k, parameter, service);
+                } 
+            }
+            else{
+                return getSubserviceRandom(k);
+            }
+        }
+       
         
         
         
@@ -481,6 +500,50 @@ public class RDFDAL {
                 
             return subserviceObj;
         }
+       
+          /**
+         * Get subservice recommendation based on context, weighted average.Only when it´s new user. 
+         * @param k number of recommendations
+         * @param location
+         * @param service
+         * @return 
+         */
+        public List<Subservice> getSubserviceContextWeighted(int k, String location, String service){
+            log.info("Enter getSubserviceContextWeighted");
+            RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+          
+            
+            String query =  String.format(header            
+                    +"SELECT ?name ?idSubservice (sum(?value1)/ count(?s) as ?score)\r\n"
+                    +"WHERE { \r\n"
+                    +"     ?s a :Subservice.\r\n"
+                    +"     ?r1 :valueRating ?value1 .\r\n"
+                    +"     ?r1 :of_service  \"%s\".\r\n"         
+                    +"     ?r1 :is_for_a ?s .\r\n"
+                    +"     ?s :id ?idSubservice;\r\n"
+                    +"        :name ?name.}  \r\n"
+                    +"GROUP BY  ?name ?idSubservice\r\n"
+                    +"ORDER BY desc(?score)\r\n"
+                    +"LIMIT %s  \r\n",  service, k);
+                System.out.println(query);
+                List<Subservice> subserviceObj = new ArrayList<>();                
+                try {
+			List<BindingSet> bindingSet = repManager.makeSPARQLquery(Parametrization.REPOSITORY_ID, query);
+			if(bindingSet.isEmpty()) return null;
+                        bindingSet.forEach(b -> {
+                            subserviceObj.add(mapSubservice(b));
+                         });							
+		} catch (Exception e) {
+			log.catching(e);
+                        System.err.println("Exception getSubserviceContextWeighted" );
+			System.out.println(e.getMessage());
+		}
+		
+                
+                
+            return subserviceObj;
+        }
+       
         
         
         /**
@@ -537,6 +600,84 @@ public class RDFDAL {
                 +"#OPTIONS TO PRESENT \r\n"
                 +"LIMIT %s  \r\n"
                , user, user, k);
+                System.out.println(query);
+                List<Subservice> subserviceObj = new ArrayList<>();                
+                try {
+			List<BindingSet> bindingSet = repManager.makeSPARQLquery(Parametrization.REPOSITORY_ID, query);
+			if(bindingSet.isEmpty()) return null;
+                        bindingSet.forEach(b -> {
+                            subserviceObj.add(mapSubservice(b));
+                         });							
+		} catch (Exception e) {
+			log.catching(e);
+                        System.err.println("Exception getSubserviceRecommendation" );
+			System.out.println(e.getMessage());
+		}
+		
+                
+                
+            return subserviceObj;
+        }
+        
+        
+        
+        /**
+         * Get subservice recommendation based on cosine distance
+         * @param k number of recommendations
+         * @param user user for recommenda
+         * @param service service
+         * @return 
+         */
+        public List<Subservice> getSubserviceRecommendationCosineDistance(int k, String user, String service){
+            log.info("Enter getSubserviceRecommendation");
+            RDFRepositoryManager repManager = new RDFRepositoryManager(Parametrization.GRAPHDB_SERVER);
+          
+            
+            String query =  String.format(header            
+                +"SELECT  ?idSubservice ?name (sum(?valueR*?similarity)/ (sum(?similarity)+0.00000001) as ?score) \r\n"
+                +"WHERE{\r\n"
+                +"?user :uses ?subservice.\r\n" 
+                +"?r :is_from_a ?user; \r\n"
+                +"   :is_for_a ?subservice;\r\n"
+                +"   :valueRating ?valueR. \r\n"
+                +"?subservice :id ?idSubservice;\r\n"
+                +"            :name ?name. \r\n"
+                +"   {SELECT ?u2 ((?dot / (?sqrtV2 * ?sqrtV1)) as ?similarity) \r\n"  
+                +"	WHERE \r\n"
+                +"	{{SELECT ?u2 (sum(?value1*?value2) as ?dot)  ?v2pow2  ?v1pow2 \r\n"
+                +"	  WHERE { \r\n"
+                +"		 ?r1 :valueRating ?value1 .\r\n"
+                +"		 ?r1 :of_service \"%s\" .\r\n"              
+                +"		 ?r1 :is_for_a ?s .\r\n"
+                +"		 ?r1 :is_from_a ?u1 .\r\n"
+                +"		 ?r2 :valueRating ?value2  .\r\n"
+                +"		 ?r2 :of_service \"%s\" .\r\n"                        
+                +"		 ?r2 :is_for_a ?s .\r\n"
+                +"		 ?r2 :is_from_a ?u2 .\r\n"
+                +"		 ?u1 :name \"%s\" .  \r\n"
+                +"		 {SELECT (sum(?value_inner1*?value_inner1) as ?v1pow2)\r\n"  
+                +"		  WHERE{ ?ri :valueRating ?value_inner1.     	    \r\n"
+                +"				 ?ri :is_from_a ?user_inner .\r\n"
+                +"				 ?user_inner :name \"%s\" . }} \r\n"
+                +"		 {SELECT ?user_inner2 (SUM(?value_inner2*?value_inner2) as ?v2pow2) \r\n" 
+                +"		  WHERE{ ?ri :valueRating ?value_inner2. \r\n"    	    
+                +"				 ?ri :is_from_a ?user_inner2 .} \r\n"
+                +"		  GROUP BY ?user_inner2 }          \r\n"
+                +"		  FILTER(?u2=?user_inner2) }  \r\n"
+                +"	   GROUP BY ?u2 ?v2pow2 ?v1pow2}       \r\n"
+                +"	   BIND (math:sqrt(?v2pow2) AS ?sqrtV2). \r\n"
+                +"	   BIND (math:sqrt(?v1pow2) AS ?sqrtV1).\r\n"
+                +"	} \r\n"
+                +"    #LIMIT NEIGHBORHOOD  \r\n"  
+                +"      ORDER BY desc(?similarity) \r\n"  
+                +"	LIMIT 10} \r\n"
+                +"	FILTER(?user=?u2) \r\n"
+                +"} \r\n"
+                +"GROUP BY ?idSubservice ?name \r\n"
+                +"ORDER BY desc(?score) \r\n"
+                +"#OPTIONS TO PRESENT \r\n"
+                +"LIMIT %s  \r\n"
+               , service, service, user, user, k);
                 System.out.println(query);
                 List<Subservice> subserviceObj = new ArrayList<>();                
                 try {

@@ -146,6 +146,15 @@ public class Headers {
     	return Response.ok(new RDFDAL().getSubserviceRecommendationGeneral(topk,userid, on)).build();
     }
     
+    @GET
+    @Path("/getServiceRecommendations")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getRecommendationSubService(@QueryParam("userid") String userid, @QueryParam("on") boolean on ,@QueryParam("topk") int topk, @QueryParam("service") String service, @QueryParam("parameter") String parameter, @HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER) {
+        System.out.println("getRecommendationSubService");
+        setServerGraphdb(GRAPHDB_SERVER);      
+    	return Response.ok(new RDFDAL().getSubserviceRecommendationGeneral(topk,userid, on, service, parameter)).build();
+    }
+    
     
     @POST
     @Path("/predictNextStepBasedonContext")
@@ -166,9 +175,9 @@ public class Headers {
     @POST
     @Path("/calculateRatingsParameters")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response calculateRatings(ArrayList<ContextInteraction> contextList,@HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER, @QueryParam("isExclusive") boolean isExclusive ,@QueryParam("idService") int idService, @QueryParam("location") String location ){
+    public Response calculateRatings(ArrayList<ContextInteraction> contextList,@HeaderParam("GRAPHDB_SERVER") String GRAPHDB_SERVER, @QueryParam("isExclusive") boolean isExclusive ,@QueryParam("service") String service, @QueryParam("location") String location ){
          setServerGraphdb(GRAPHDB_SERVER);
-         return Response.ok(new RDFDAL().calculateRatings(contextList, isExclusive, idService, location)).build();
+         return Response.ok(new RDFDAL().calculateRatings(contextList, isExclusive, service, location)).build();
     }
     
     
