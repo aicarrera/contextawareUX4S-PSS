@@ -321,7 +321,7 @@ public class RDFDAL {
                     +"} \r\n"
                     +"where \r\n"
                     +"{     \r\n"
-                    +"select ?u1  (sum(?valueInteraction)/?q as ?rate1) ?s  ?iri where { \r\n"
+                    +"select ?u1 ?service (sum(?valueInteraction)/?q as ?rate1) ?s  ?iri where { \r\n"
                     +"	  ?u1 :makes ?i1 . \r\n"
                     +"    ?i1 :executes ?s. \r\n"
                     +"    ?s :is_subservice_of ?service. \r\n"
@@ -341,7 +341,7 @@ public class RDFDAL {
                     +"    \r\n"
                     +"    FILTER (?location = \"%s\" &&  ?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
-                    +"GROUP BY ?u1 ?s ?q  ?iri \r\n"
+                    +"GROUP BY ?u1 ?service ?s ?q  ?iri \r\n"
                     +"ORDER BY ?u1 ?s \r\n"
                     +"}; \r\n", service,allContextValues,location,allContextValues);
                     System.out.println("QUERY:  "+query);
