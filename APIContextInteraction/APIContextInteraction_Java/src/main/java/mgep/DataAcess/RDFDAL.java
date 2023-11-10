@@ -653,7 +653,7 @@ public class RDFDAL {
                 +"		 ?r1 :is_from_a ?u1 .\r\n"
                 +"               ?r2 :valueRating ?value2  .\r\n"
                 +"               ?r2 :of_service ?service2 .\r\n"
-                +"               ?service2 :name \"%s\"  \r\n"                          
+                +"               ?service2 :name \"%s\"  .\r\n"                          
                 +"		 ?r2 :is_for_a ?s .\r\n"
                 +"		 ?r2 :is_from_a ?u2 .\r\n"
                 +"		 ?u1 :name \"%s\" .  \r\n"
