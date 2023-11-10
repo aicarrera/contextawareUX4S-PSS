@@ -637,7 +637,9 @@ public class RDFDAL {
                 +"?user :uses ?subservice.\r\n" 
                 +"?r :is_from_a ?user; \r\n"
                 +"   :is_for_a ?subservice;\r\n"
-                +"   :valueRating ?valueR. \r\n"
+                +"   :valueRating ?valueR; \r\n"
+                +"   :of_service ?service. \r\n"
+                +"?service :name \"%s\". \r\n"
                 +"?subservice :id ?idSubservice;\r\n"
                 +"            :name ?name. \r\n"
                 +"   {SELECT ?u2 ((?dot / (?sqrtV2 * ?sqrtV1)) as ?similarity) \r\n"  
@@ -645,10 +647,12 @@ public class RDFDAL {
                 +"	{{SELECT ?u2 (sum(?value1*?value2) as ?dot)  ?v2pow2  ?v1pow2 \r\n"
                 +"	  WHERE { \r\n"
                 +"		 ?r1 :valueRating ?value1 .\r\n"
-                +"		 ?r1 :of_service \"%s\" .\r\n"              
+                +"		 ?r1 :of_service ?service1 . \r\n"                       
+                +"               ?service1 :name \"%s\". \r\n"
                 +"		 ?r1 :is_for_a ?s .\r\n"
                 +"		 ?r1 :is_from_a ?u1 .\r\n"
-                +"		 ?r2 :valueRating ?value2  .\r\n"
+                +"		 ?r2 :of_service ?service2   .\r\n"
+                +"               ?service2 :name \"%s\". \r\n"
                 +"		 ?r2 :of_service \"%s\" .\r\n"                        
                 +"		 ?r2 :is_for_a ?s .\r\n"
                 +"		 ?r2 :is_from_a ?u2 .\r\n"
@@ -675,7 +679,7 @@ public class RDFDAL {
                 +"ORDER BY desc(?score) \r\n"
                 +"#OPTIONS TO PRESENT \r\n"
                 +"LIMIT %s  \r\n"
-               , service, service, user, user, k);
+               , service,service, service, user, user, k);
                 System.out.println(query);
                 List<Subservice> subserviceObj = new ArrayList<>();                
                 try {
