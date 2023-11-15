@@ -152,7 +152,7 @@ public class RDFDAL {
                     "%s" +
                     "}; \n" , i.getValue(), i.getStartDate(),i.getEndDate(),i.getId(),occursSTR,i.getId(),i.getIdSubservice(),i.getIdUser(),bindSTR);
             }
-              
+            //System.out.println(query)  ;
             return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
                    
         }
@@ -336,14 +336,19 @@ public class RDFDAL {
                     +"   BIND(IRI(CONCAT(\"http://ontologies/interactioncontext#rating_\",CONCAT(STR(?id1),'_',STR(?id2))))as ?iri) \r\n"
                     +"   { SELECT ?subu (count(?i) as ?q ) where \r\n"
                     + "  {?subu a :User. \r\n"
-                    + "   ?subu :makes ?i.  ?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
+                    + "   ?subu :makes ?i.  \r\n"
+                    + "  ?i :executes ?subserviceInner. \r\n"
+    		    + "  ?subserviceInner :is_subservice_of ?serviceInner.\r\n"
+    		    + "  ?serviceInner :location ?location. \r\n"
+                    + "  ?serviceInner :name \"%s\" .\r\n"
+                    + "?i :occurs_in ?c .  ?c :value ?contextvalue.  ?i :valueInteraction ?valueInteractionInt.\r\n"
                     + "   filter((%s)&& ?valueInteractionInt>0)} GROUP BY ?subu  } \r\n"
                     +"    \r\n"
                     +"    FILTER (?location = \"%s\" &&  ?u1 = ?subu && (%s)) \r\n"
                     +"} \r\n"    
                     +"GROUP BY ?u1 ?service ?s ?q  ?iri \r\n"
                     +"ORDER BY ?u1 ?s \r\n"
-                    +"}; \r\n", service,allContextValues,location,allContextValues);
+                    +"}; \r\n", service,service,allContextValues,location,allContextValues);
                     System.out.println("QUERY:  "+query);
                     return repManager.executeInsert(Parametrization.REPOSITORY_ID, query);
         }
